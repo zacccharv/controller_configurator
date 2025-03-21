@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="mouse_enums_holder" load_steps=2 format=3 uid="uid://3r7c8ikj7vig"]
+
+[ext_resource type="Script" uid="uid://dwtvvmerdxwc" path="res://_scripts/enumerations/mouse_enums_holder.gd" id="1_7hwn4"]
+
+[resource]
+script = ExtResource("1_7hwn4")
+mouse_buttons = 0
+metadata/_custom_type_script = "uid://dwtvvmerdxwc"

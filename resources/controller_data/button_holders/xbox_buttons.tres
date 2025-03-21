@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="xbox_enums_holder" load_steps=2 format=3 uid="uid://dmv83ux668bu6"]
+
+[ext_resource type="Script" uid="uid://c01fjnkf1bhwm" path="res://_scripts/enumerations/xbox_enums_holder.gd" id="1_0vxks"]
+
+[resource]
+script = ExtResource("1_0vxks")
+xbox_buttons = 0
+metadata/_custom_type_script = "uid://c01fjnkf1bhwm"

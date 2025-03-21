@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="button_remap_row" load_steps=4 format=3 uid="uid://eahvqddens6j"]
+
+[ext_resource type="Resource" uid="uid://3r7c8ikj7vig" path="res://resources/controller_data/button_holders/mouse_buttons.tres" id="2_q6mjs"]
+[ext_resource type="Resource" uid="uid://84g3jho048rq" path="res://resources/controller_data/button_holders/keyboard_keys.tres" id="3_78qdu"]
+[ext_resource type="Script" uid="uid://bgt8dvhd2y7us" path="res://_scripts/resource_classes/button_remap_row.gd" id="4_7g31e"]
+
+[resource]
+script = ExtResource("4_7g31e")
+button = ExtResource("3_78qdu")
+remap_action = ""
+remap_button_controller = [ExtResource("2_q6mjs"), ExtResource("3_78qdu")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"

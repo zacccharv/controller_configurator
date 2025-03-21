@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="switch_enums_holder" load_steps=2 format=3 uid="uid://5x4kb6iy36w3"]
+
+[ext_resource type="Script" uid="uid://csrlq2uh0iwk5" path="res://_scripts/enumerations/switch_enums_holder.gd" id="1_pmdje"]
+
+[resource]
+script = ExtResource("1_pmdje")
+switch_buttons = 0

@@ -1,0 +1,127 @@
+class_name button_enums
+
+enum PS4Controller {
+	# FACE BUTTONS
+		SQUARE,
+		CROSS,
+		CIRCLE,
+		TRIANGLE,
+	# TRIGGER BUTTONS
+		R1,
+		R2,
+		L1,
+		L2,
+	# DPAD
+		DPAD_UP,
+		DPAD_RIGHT,
+		DPAD_DOWN,
+		DPAD_LEFT,
+	# LSTICK
+		LSTICK_UP,
+		LSTICK_RIGHT,
+		LSTICK_DOWN,
+		LSTICK_LEFT,
+		L3,
+	# RSTICK
+		RSTICK_UP,
+		RSTICK_RIGHT,
+		RSTICK_DOWN,
+		RSTICK_LEFT,
+		R3,
+	# TOUCHPAD
+		TOUCHPAD,
+		TOUCHPAD_LEFT,
+		TOUCHPAD_RIGHT,
+	# SPECIAL BUTTONS
+		SHARE,
+		OPTIONS,
+}
+
+# Use as default controller
+enum XboxController {
+	# Face buttons
+		Y,
+		X,
+		A,
+		B,
+	# Trigger buttons
+		RB,
+		RT,
+		LB,
+		LT,
+	# Dpad
+		DPAD_UP,
+		DPAD_RIGHT,
+		DPAD_DOWN,
+		DPAD_LEFT,
+	# Lstick
+		LSTICK_UP,
+		LSTICK_RIGHT,
+		LSTICK_DOWN,
+		LSTICK_LEFT,
+		L3,
+	# Rstick
+		RSTICK_UP,
+		RSTICK_RIGHT,
+		RSTICK_DOWN,
+		RSTICK_LEFT,
+		R3,
+	# Special buttons
+		MENU,
+		VIEW,
+		SHARE
+}
+
+enum SwitchController {
+	# Face buttons
+		X,
+		Y,
+		B,
+		A,
+	# Trigger buttons
+		SL,
+		SR,
+		ZL,
+		ZR,
+	# Dpad
+		DPAD_UP,
+		DPAD_RIGHT,
+		DPAD_DOWN,
+		DPAD_LEFT,
+	# Lstick
+		LSTICK_UP,
+		LSTICK_RIGHT,
+		LSTICK_DOWN,
+		LSTICK_LEFT,
+		L3,
+	# Rstick
+		RSTICK_UP,
+		RSTICK_RIGHT,
+		RSTICK_DOWN,
+		RSTICK_LEFT,
+		R3,
+	# Special buttons
+		SYNC,
+		HOME,
+		PLUS,
+		MINUS,
+}
+
+enum Mouse {
+	LEFT_CLICK, RIGHT_CLICK, MIDDLE_CLICK, WHEEL_UP, WHEEL_DOWN,
+}
+
+enum Keyboard {
+	# Letters
+	A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z,
+	# Numbers
+	ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, ZERO,
+	# Alternate top row
+	BACKTICK, TILDE, EXCLAIMATION_POINT, AT_SIGN, HASHTAG, DOLLAR_SIGN, PERCENT_SIGN, CARET, AMPERSAND, ASTERISK, LEFT_PARENTHESIS, RIGHT_PARENTHESIS, DASH, UNDERSCORE, EQUAL, PLUS,
+	# Extra Symbols 01
+	LEFT_BRACKET, RIGHT_BRACKET, BACKSLASH, COLON, SINGLE_QUOTE, COMMA, PERIOD, FORWARD_SLASH,
+	# Extra Symbols 02
+	RIGHT_CURLY_BRACE, LEFT_CURLY_BRACE, PIPE, SEMICOLON, DOUBLE_QUOTE, LESS_THAN, GREATER_THAN, QUESTION_MARK,
+	# Function keys
+	BACKSPACE, TAB, ENTER, SHIFT, CONTROL, ALT, CAPSLOCK, ESCAPE, SPACE, PAGEUP, PAGEDOWN, END, HOME, LEFT, UP, RIGHT, DOWN, INSERT, DELETE,
+}
