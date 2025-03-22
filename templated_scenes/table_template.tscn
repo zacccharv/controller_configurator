@@ -1,12 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://qxhn4lcm4t3x"]
+[gd_scene load_steps=7 format=3 uid="uid://qxhn4lcm4t3x"]
 
 [ext_resource type="Script" uid="uid://ud5au0gntvyw" path="res://_scripts/table_background.gd" id="1_pac6i"]
 [ext_resource type="Script" uid="uid://bwh8ot86kqobo" path="res://_scripts/table_generator.gd" id="2_ap113"]
+[ext_resource type="Resource" uid="uid://v57klihgyr0i" path="res://resources/controller_data/ps4_basic.tres" id="3_xqw84"]
 [ext_resource type="Script" uid="uid://n8xx2nkain1q" path="res://_scripts/resource_classes/controller_config.gd" id="4_5olmm"]
+[ext_resource type="PackedScene" uid="uid://cm3m2iedf87js" path="res://templated_scenes/button_image_panel.tscn" id="5_5olmm"]
 
 [sub_resource type="Resource" id="Resource_nao16"]
 script = ExtResource("4_5olmm")
 config_name = ""
+config_controller = ExtResource("3_xqw84")
 metadata/_custom_type_script = "uid://n8xx2nkain1q"
 
 [node name="Table" type="Control"]
@@ -46,4 +49,4 @@ title_color = Color(0.263009, 0.492047, 0.648815, 1)
 even_color = Color(0.266575, 0.266575, 0.266575, 1)
 odd_color = Color(0.158472, 0.158472, 0.158472, 1)
 controller_cfg = SubResource("Resource_nao16")
-table_grid = [["Action", "Gamepad Button", "Keyboard Key"], ["Attack", "Square", "X Key"], ["Jump", "Cross", "Spacebar"], ["Dodge", "Circle", "Shift"], ["Crouch", "L3", "Control"]]
+button_image_panel = ExtResource("5_5olmm")

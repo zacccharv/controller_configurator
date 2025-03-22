@@ -1,3 +1,4 @@
+# Class that generates a table UI from a 2D array of data
 class_name table_generator
 
 extends HBoxContainer
@@ -7,8 +8,7 @@ extends HBoxContainer
 @export var odd_color: Color
 
 @export var controller_cfg: controller_config
-
-@export var table_grid = [["Title00", "Title01", "Title02"], ["a", "b", "c"], ["d", "e", "f"], ["g", "h", "i"]]
+@export var button_image_panel: PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,37 +16,89 @@ func _ready():
 
 func generate_grid():
 	# create the columns
-	for column_index in range(table_grid[0].size()):
-		var col = VBoxContainer.new()
-		var row_count = (table_grid as Array).size()
+	for column_index in range(3):
+		var col: VBoxContainer = VBoxContainer.new()
+
+		for row in controller_cfg.config_controller.controller_buttons.size():
+			var value
+			var m_button_remap_row: button_remap_row = controller_cfg.config_controller.controller_buttons[row]
+
+			if column_index == 0:
+				value = get_button_value(m_button_remap_row, m_button_remap_row.button)
+				generate_panel_image(row, col, value)
+			elif column_index == 1:
+				value = get_button_value(m_button_remap_row, m_button_remap_row.remap_button)
+				generate_panel_image(row, col, value)
+			elif column_index == 2:
+				value = "ACTION"
+				generate_panel_text(row, col, value)
+
+			# Add panel to vbox keeping track of the row to recolor on odd/even rows
+			# panels generated a column at a time
 
 		col.add_theme_constant_override("separation", 2)
-
-		generate_row(row_count, column_index, col)
 		self.add_child(col)
 
-func generate_row(count: int, column: int, vbox: VBoxContainer):
-	for row in range(count):
-		generate_panel(row, vbox, table_grid[row][column] as String)
-
-func generate_panel(row: int, vbox: VBoxContainer, text: String):
+func generate_panel_text(row: int, vbox: VBoxContainer, text: String):
 	var panel = PanelContainer.new()
-	var color_rect = ColorRect.new()
 	var label = Label.new()
 
 	panel.size_flags_horizontal = Control.SIZE_FILL
 
+	# Use styleboxes instead of ColorRect
+	var style = StyleBoxFlat.new()
 	if (row == 0):
-		color_rect.color = title_color
-	else: if (row % 2 == 0):
-		color_rect.color = even_color
-	else: if (row % 2 == 1):
-		color_rect.color = odd_color
+		style.bg_color = title_color
+	elif (row % 2 == 0):
+		style.bg_color = even_color
+	else:
+		style.bg_color = odd_color
+
+	panel.add_theme_stylebox_override("panel", style)
 
 	label.text = text
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	label.add_theme_stylebox_override("normal", preload("res://resources/panel_style.tres"))
 
-	panel.add_child(color_rect)
 	panel.add_child(label)
 	vbox.add_child(panel)
+
+func generate_panel_image(row: int, vbox: VBoxContainer, texture: CompressedTexture2D):
+	var panel = Panel.new()
+
+	var node_val: Node = button_image_panel.instantiate()
+	node_val.get_node("TextureRect").texture = texture
+
+	panel.size_flags_horizontal = Control.SIZE_FILL
+
+	# Use styleboxes instead of ColorRect
+	var style = StyleBoxFlat.new()
+	if (row == 0):
+		style.bg_color = title_color
+	elif (row % 2 == 0):
+		style.bg_color = even_color
+	else:
+		style.bg_color = odd_color
+
+	vbox.add_child(panel)
+
+func get_button_value(remap_row: button_remap_row, button: Resource) -> CompressedTexture2D:
+	var panel_value: CompressedTexture2D
+
+	if remap_row.button is keyboard_enums_holder:
+		panel_value = load(ButtonImageBinds.ps4_button_image_bind_dict[remap_row.button]["image_path"])
+	elif remap_row.button is mouse_enums_holder:
+		panel_value = load(ButtonImageBinds.mouse_button_image_bind_dict[remap_row.button]["image_path"])
+	elif remap_row.button is ps4_enums_holder:
+		# FIXME: get an int from the enum
+		var index: int = button_enums.PS4Controller.find_key((remap_row.button as ps4_enums_holder).ps4_buttons)
+		var x: String = ButtonImageBinds.ps4_button_image_bind_dict[button_enums.PS4Controller.find_key(index)]["image_path"]
+		panel_value = load(x)
+	elif remap_row.button is xbox_enums_holder:
+		panel_value = load(ButtonImageBinds.xbox_button_image_bind_dict[remap_row.button]["image_path"])
+	elif remap_row.button is switch_enums_holder:
+		panel_value = load(ButtonImageBinds.switch_button_image_bind_dict[remap_row.button]["image_path"])
+
+	# print(panel_value)
+
+	return panel_value

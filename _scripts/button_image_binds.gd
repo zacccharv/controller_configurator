@@ -279,7 +279,7 @@ extends Node
 	},
 }
 
-# func _ready() -> void:
-# 	for item in xbox_button_image_bind_dict:
-# 		var val: CompressedTexture2D = load(xbox_button_image_bind_dict[item]["image_path"])
-# 		print(val.resource_path)
+func _ready() -> void:
+	for item in xbox_button_image_bind_dict:
+		var val: CompressedTexture2D = load(xbox_button_image_bind_dict[item]["image_path"])
+		print(item)
