@@ -1,8 +1,7 @@
 [gd_resource type="Resource" script_class="keyboard_enums_holder" load_steps=2 format=3 uid="uid://84g3jho048rq"]
 
-[ext_resource type="Script" uid="uid://cwiduvx2r3mk8" path="res://_scripts/enumerations/keyboard_enums_holder.gd" id="1_ybymy"]
+[ext_resource type="Script" uid="uid://be1blcmmb5f8v" path="res://_scripts/enumerations/keyboard_enums_holder.gd" id="1_ybymy"]
 
 [resource]
 script = ExtResource("1_ybymy")
-keyboard_buttons = 0
-metadata/_custom_type_script = "uid://cwiduvx2r3mk8"
+keyboard_keys = 0

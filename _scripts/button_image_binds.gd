@@ -24,11 +24,17 @@ extends Node
 	button_enums.PS4Controller.R2: {
 		"image_path": "res://images/controller_icons/playstation_trigger_r2.png",
 	},
+	button_enums.PS4Controller.R3: {
+		"image_path": "res://images/controller_icons/r3.png",
+	},
 	button_enums.PS4Controller.L1: {
 		"image_path": "res://images/controller_icons/playstation_trigger_l1_alternative.png",
 	},
 	button_enums.PS4Controller.L2: {
 		"image_path": "res://images/controller_icons/playstation_trigger_l2.png",
+	},
+	button_enums.PS4Controller.L3: {
+		"image_path": "res://images/controller_icons/l3.png",
 	},
 	#endregion Trigger buttons
 	#region Dpad
@@ -79,6 +85,9 @@ extends Node
 	},
 	button_enums.PS4Controller.TOUCHPAD_LEFT: {
 		"image_path": "res://images/controller_icons/playstation_touchpad_left_click.png",
+	},
+	button_enums.PS4Controller.TOUCHPAD_RIGHT: {
+		"image_path": "res://images/controller_icons/playstation_touchpad_right_click.png",
 	},
 	#region Special buttons
 	button_enums.PS4Controller.SHARE: {
@@ -279,7 +288,7 @@ extends Node
 	},
 }
 
-func _ready() -> void:
-	for item in xbox_button_image_bind_dict:
-		var val: CompressedTexture2D = load(xbox_button_image_bind_dict[item]["image_path"])
-		print(item)
+# func _ready() -> void:
+# 	for item in xbox_button_image_bind_dict:
+# 		var val: CompressedTexture2D = load(xbox_button_image_bind_dict[item]["image_path"])
+# 		print(item)

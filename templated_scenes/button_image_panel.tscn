@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cm3m2iedf87js"]
 
 [ext_resource type="StyleBox" uid="uid://dvajegq5ut7ea" path="res://resources/panel_style.tres" id="1_07dqe"]
-[ext_resource type="Texture2D" uid="uid://f2mejkytf0uy" path="res://images/controller_icons/playstation_button_color_square.png" id="2_jhvj5"]
+[ext_resource type="Texture2D" uid="uid://b88pmyla5cy6i" path="res://images/controller_icons/playstation_button_color_square.png" id="2_jhvj5"]
 
 [node name="button_image_panel" type="Panel"]
 anchors_preset = 8

@@ -9,6 +9,7 @@ extends HBoxContainer
 
 @export var controller_cfg: controller_config
 @export var button_image_panel: PackedScene
+const box_height: int = 35
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -44,6 +45,7 @@ func generate_panel_text(row: int, vbox: VBoxContainer, text: String):
 	var label = Label.new()
 
 	panel.size_flags_horizontal = Control.SIZE_FILL
+	label.custom_minimum_size = Vector2(100, box_height)
 
 	# Use styleboxes instead of ColorRect
 	var style = StyleBoxFlat.new()
@@ -69,7 +71,9 @@ func generate_panel_image(row: int, vbox: VBoxContainer, texture: CompressedText
 	var node_val: Node = button_image_panel.instantiate()
 	node_val.get_node("TextureRect").texture = texture
 
-	panel.size_flags_horizontal = Control.SIZE_FILL
+	panel.size_flags_vertical = Control.SIZE_EXPAND
+	panel.custom_minimum_size = Vector2(100, box_height)
+	panel.add_child(node_val)
 
 	# Use styleboxes instead of ColorRect
 	var style = StyleBoxFlat.new()
@@ -79,6 +83,8 @@ func generate_panel_image(row: int, vbox: VBoxContainer, texture: CompressedText
 		style.bg_color = even_color
 	else:
 		style.bg_color = odd_color
+
+	panel.add_theme_stylebox_override("panel", style)
 
 	vbox.add_child(panel)
 
@@ -90,10 +96,10 @@ func get_button_value(remap_row: button_remap_row, button: Resource) -> Compress
 	elif remap_row.button is mouse_enums_holder:
 		panel_value = load(ButtonImageBinds.mouse_button_image_bind_dict[remap_row.button]["image_path"])
 	elif remap_row.button is ps4_enums_holder:
-		# FIXME: get an int from the enum
-		var index: int = button_enums.PS4Controller.find_key((remap_row.button as ps4_enums_holder).ps4_buttons)
-		var x: String = ButtonImageBinds.ps4_button_image_bind_dict[button_enums.PS4Controller.find_key(index)]["image_path"]
+		var index: int = ((remap_row.button as ps4_enums_holder).ps4_buttons as button_enums.PS4Controller)
+		var x: String = ButtonImageBinds.ps4_button_image_bind_dict[index]["image_path"]
 		panel_value = load(x)
+		print(panel_value)
 	elif remap_row.button is xbox_enums_holder:
 		panel_value = load(ButtonImageBinds.xbox_button_image_bind_dict[remap_row.button]["image_path"])
 	elif remap_row.button is switch_enums_holder:

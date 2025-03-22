@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://5pv5qjfpltvg"]
+[gd_scene load_steps=5 format=3 uid="uid://5pv5qjfpltvg"]
 
 [ext_resource type="PackedScene" uid="uid://qxhn4lcm4t3x" path="res://templated_scenes/table_template.tscn" id="1_vqs83"]
-[ext_resource type="Script" uid="uid://xu5vsm5y11yk" path="res://_scripts/button_image_binds.gd" id="2_dmkxd"]
-[ext_resource type="Script" uid="uid://baf4a880qyb55" path="res://_scripts/tools/generate_controller_template.gd" id="3_nvkn0"]
-[ext_resource type="PackedScene" uid="uid://cm3m2iedf87js" path="res://templated_scenes/button_image_panel.tscn" id="4_qs5e2"]
+[ext_resource type="Script" uid="uid://b1w5k0tdfhpsb" path="res://_scripts/button_image_binds.gd" id="2_dmkxd"]
+[ext_resource type="Script" uid="uid://j3umcrhfiyk4" path="res://_scripts/tools/generate_controller_template.gd" id="3_nvkn0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vqs83"]
 font_size = 30
@@ -52,25 +51,3 @@ script = ExtResource("2_dmkxd")
 [node name="Node" type="Node" parent="."]
 script = ExtResource("3_nvkn0")
 name_of_file = "ps4_basic"
-
-[node name="Panel" type="Panel" parent="."]
-clip_contents = true
-layout_mode = 0
-offset_left = 304.0
-offset_top = 261.0
-offset_right = 344.0
-offset_bottom = 301.0
-
-[node name="button_image_panel" parent="Panel" instance=ExtResource("4_qs5e2")]
-layout_mode = 0
-anchors_preset = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 35.0
-offset_bottom = 35.0
-grow_horizontal = 1
-grow_vertical = 1
