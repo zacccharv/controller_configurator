@@ -28,19 +28,19 @@ func _generate():
 
 	var config: Dictionary = {
 		ControllerType.PS4: {
-			"enum_source": button_enums.PS4Controller,
+			"enum_source": ButtonEnums.PS4Controller,
 			"controller_source": ps4_button_row_template,
 			"holder_class": ps4_enums_holder,
 			"button_property": "ps4_buttons"
 		},
 		ControllerType.XBOX: {
-			"enum_source": button_enums.XboxController,
+			"enum_source": ButtonEnums.XboxController,
 			"controller_source": xbox_button_row_template,
 			"holder_class": xbox_enums_holder,
 			"button_property": "xbox_buttons"
 		},
 		ControllerType.SWITCH: {
-			"enum_source": button_enums.SwitchController,
+			"enum_source": ButtonEnums.SwitchController,
 			"controller_source": switch_button_row_template,
 			"holder_class": switch_enums_holder,
 			"button_property": "switch_buttons"

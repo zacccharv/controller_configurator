@@ -1,5 +1,3 @@
-class_name table_background
-
 extends ColorRect
 
 @export var box_container_transform: BoxContainer

@@ -1,6 +1,7 @@
 ; Engine configuration file.
 ; It's best edited using the editor UI and not directly,
 ; since the parameters that go here are not all obvious.
+
 ;
 ; Format:
 ;   [section] ; section goes between []
@@ -18,6 +19,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 ButtonImageBinds="*res://_scripts/button_image_binds.gd"
+ButtonEnums="*res://_scripts/enumerations/button_enums.gd"
+
+[gui]
+
+theme/custom="uid://r7j3xncy5pod"
 
 [rendering]
 

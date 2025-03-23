@@ -1,5 +1,3 @@
-class_name swap_table_button
-
 extends Button
 
 @export var r_table_generator: table_generator

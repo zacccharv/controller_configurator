@@ -1,4 +1,4 @@
-class_name button_enums
+extends Node
 
 enum PS4Controller {
 	# FACE BUTTONS

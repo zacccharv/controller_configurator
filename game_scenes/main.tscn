@@ -8,9 +8,9 @@
 [ext_resource type="Resource" uid="uid://l3c4lmebrcu2" path="res://resources/controller_data/controller_cfg_00.tres" id="4_ah8td"]
 [ext_resource type="Script" uid="uid://n8xx2nkain1q" path="res://_scripts/resource_classes/controller_config.gd" id="5_t870e"]
 [ext_resource type="PackedScene" uid="uid://cm3m2iedf87js" path="res://templated_scenes/button_image_panel.tscn" id="6_jvxvt"]
+[ext_resource type="Theme" uid="uid://r7j3xncy5pod" path="res://resources/main_theme.res" id="7_002ow"]
 [ext_resource type="PackedScene" uid="uid://clnwoi4ueektg" path="res://templated_scenes/editable_label.tscn" id="7_s8k4a"]
 [ext_resource type="Texture2D" uid="uid://f2mejkytf0uy" path="res://images/controller_icons/playstation_button_color_square.png" id="9_7lldt"]
-[ext_resource type="Script" uid="uid://bjakasbbcn8np" path="res://_scripts/images_cache.gd" id="10_8tdwu"]
 [ext_resource type="Texture2D" uid="uid://cndhgee2plie8" path="res://images/controller_icons/playstation_button_color_cross.png" id="10_ah8td"]
 [ext_resource type="Texture2D" uid="uid://ofgx0p4qy6gr" path="res://images/controller_icons/playstation_button_color_circle.png" id="11_bwdex"]
 [ext_resource type="Texture2D" uid="uid://c40hbys7bfjss" path="res://images/controller_icons/playstation_button_color_triangle.png" id="12_002ow"]
@@ -173,6 +173,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+theme = ExtResource("7_002ow")
 script = ExtResource("2_dmkxd")
 ps4_button_image_bind_dict = {
 0: {
@@ -503,9 +504,6 @@ mouse_button_image_bind_dict = {
 script = ExtResource("3_nvkn0")
 controller_type = 2
 name_of_file = "switch_test"
-
-[node name="cache" type="Node" parent="."]
-script = ExtResource("10_8tdwu")
 
 [node name="Button" type="Button" parent="." node_paths=PackedStringArray("r_table_generator")]
 layout_mode = 0
