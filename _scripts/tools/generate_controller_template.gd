@@ -16,29 +16,32 @@ var ps4_button_row_template: button_remap_row = preload("res://resources/control
 var xbox_button_row_template: button_remap_row = preload("res://resources/controller_data/remap_rows/xbox_remap_row.tres")
 var switch_button_row_template: button_remap_row = preload("res://resources/controller_data/remap_rows/switch_remap_row.tres")
 
-var template: controller_resource
+var controller_source: controller_resource
+var r_controller_config: controller_config
+
 
 @export_tool_button("Generate", "Callable") var generate_action = _generate
 
 func _generate():
-	template = controller_resource.new()
+	controller_source = controller_resource.new()
+	r_controller_config = controller_config.new()
 
 	var config: Dictionary = {
 		ControllerType.PS4: {
 			"enum_source": button_enums.PS4Controller,
-			"template": ps4_button_row_template,
+			"controller_source": ps4_button_row_template,
 			"holder_class": ps4_enums_holder,
 			"button_property": "ps4_buttons"
 		},
 		ControllerType.XBOX: {
 			"enum_source": button_enums.XboxController,
-			"template": xbox_button_row_template,
+			"controller_source": xbox_button_row_template,
 			"holder_class": xbox_enums_holder,
 			"button_property": "xbox_buttons"
 		},
 		ControllerType.SWITCH: {
 			"enum_source": button_enums.SwitchController,
-			"template": switch_button_row_template,
+			"controller_source": switch_button_row_template,
 			"holder_class": switch_enums_holder,
 			"button_property": "switch_buttons"
 		}
@@ -46,7 +49,7 @@ func _generate():
 
 	var current_config = config[controller_type]
 	var enum_source = current_config["enum_source"]
-	var button_template = current_config["template"]
+	var button_template = current_config["controller_source"]
 	var holder_class = current_config["holder_class"]
 	var button_property = current_config["button_property"]
 
@@ -62,8 +65,14 @@ func _generate():
 		row.button = button_holder
 		row.remap_button = remap_holder
 
-		template.controller_buttons.append(row)
+		controller_source.controller_buttons.append(row)
 
-	var save_path = "res://resources/controller_data/" + name_of_file + ".tres"
-	ResourceSaver.save(template, save_path)
-	print("Generated controller template: " + name_of_file)
+
+	var save_path_resource = "res://resources/controller_data/" + name_of_file + "_source.tres"
+	var save_path_config = "res://resources/controller_data/" + name_of_file + "_cfg.tres"
+	ResourceSaver.save(controller_source, save_path_resource)
+
+	r_controller_config.config_name = name_of_file
+	r_controller_config.config_controller = controller_source
+
+	ResourceSaver.save(r_controller_config, save_path_config)

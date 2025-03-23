@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="controller_config" load_steps=2 format=3 uid="uid://ctg3qlbu5lbla"]
+
+[ext_resource type="Script" uid="uid://n8xx2nkain1q" path="res://_scripts/resource_classes/controller_config.gd" id="1_8wwfj"]
+
+[resource]
+script = ExtResource("1_8wwfj")
+config_name = ""
+metadata/_custom_type_script = "uid://n8xx2nkain1q"

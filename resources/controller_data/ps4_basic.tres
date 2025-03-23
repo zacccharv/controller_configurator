@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="controller_resource" load_steps=88 format=3 uid="uid://v57klihgyr0i"]
 
-[ext_resource type="Script" uid="uid://1j0xo2ykobt6" path="res://_scripts/resource_classes/button_remap_row.gd" id="1_q2dmh"]
-[ext_resource type="Script" uid="uid://d1h6xfiv8ggby" path="res://_scripts/enumerations/ps4_enums_holder.gd" id="2_3c7y4"]
+[ext_resource type="Script" uid="uid://bgt8dvhd2y7us" path="res://_scripts/resource_classes/button_remap_row.gd" id="1_q2dmh"]
+[ext_resource type="Script" uid="uid://cfnqqjq6wb6od" path="res://_scripts/enumerations/ps4_enums_holder.gd" id="2_3c7y4"]
 [ext_resource type="Resource" uid="uid://7ukd3ulijy2v" path="res://resources/controller_data/button_holders/ps4_buttons.tres" id="3_h24cc"]
 [ext_resource type="Resource" uid="uid://3r7c8ikj7vig" path="res://resources/controller_data/button_holders/mouse_buttons.tres" id="4_yfuos"]
 [ext_resource type="Resource" uid="uid://84g3jho048rq" path="res://resources/controller_data/button_holders/keyboard_keys.tres" id="5_6g46c"]
-[ext_resource type="Script" uid="uid://dvonvnmlr4hqd" path="res://_scripts/resource_classes/controller_resource.gd" id="6_qpuh5"]
+[ext_resource type="Script" uid="uid://q57uirpdejuf" path="res://_scripts/resource_classes/controller_resource.gd" id="6_qpuh5"]
 
 [sub_resource type="Resource" id="Resource_edg1d"]
 script = ExtResource("2_3c7y4")

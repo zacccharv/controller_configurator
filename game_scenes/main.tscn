@@ -1,10 +1,83 @@
-[gd_scene load_steps=5 format=3 uid="uid://5pv5qjfpltvg"]
+[gd_scene load_steps=78 format=3 uid="uid://5pv5qjfpltvg"]
 
-[ext_resource type="PackedScene" uid="uid://qxhn4lcm4t3x" path="res://templated_scenes/table_template.tscn" id="1_vqs83"]
-[ext_resource type="Script" uid="uid://b1w5k0tdfhpsb" path="res://_scripts/button_image_binds.gd" id="2_dmkxd"]
-[ext_resource type="Script" uid="uid://j3umcrhfiyk4" path="res://_scripts/tools/generate_controller_template.gd" id="3_nvkn0"]
+[ext_resource type="Script" uid="uid://ud5au0gntvyw" path="res://_scripts/table_background.gd" id="1_eu44l"]
+[ext_resource type="StyleBox" uid="uid://dvajegq5ut7ea" path="res://resources/panel_style.tres" id="2_8tdwu"]
+[ext_resource type="Script" uid="uid://xu5vsm5y11yk" path="res://_scripts/button_image_binds.gd" id="2_dmkxd"]
+[ext_resource type="Script" uid="uid://bwh8ot86kqobo" path="res://_scripts/table_generator.gd" id="3_82xgy"]
+[ext_resource type="Script" uid="uid://baf4a880qyb55" path="res://_scripts/tools/generate_controller_template.gd" id="3_nvkn0"]
+[ext_resource type="Resource" uid="uid://l3c4lmebrcu2" path="res://resources/controller_data/controller_cfg_00.tres" id="4_ah8td"]
+[ext_resource type="Script" uid="uid://n8xx2nkain1q" path="res://_scripts/resource_classes/controller_config.gd" id="5_t870e"]
+[ext_resource type="PackedScene" uid="uid://cm3m2iedf87js" path="res://templated_scenes/button_image_panel.tscn" id="6_jvxvt"]
+[ext_resource type="PackedScene" uid="uid://clnwoi4ueektg" path="res://templated_scenes/editable_label.tscn" id="7_s8k4a"]
+[ext_resource type="Texture2D" uid="uid://f2mejkytf0uy" path="res://images/controller_icons/playstation_button_color_square.png" id="9_7lldt"]
+[ext_resource type="Script" uid="uid://bjakasbbcn8np" path="res://_scripts/images_cache.gd" id="10_8tdwu"]
+[ext_resource type="Texture2D" uid="uid://cndhgee2plie8" path="res://images/controller_icons/playstation_button_color_cross.png" id="10_ah8td"]
+[ext_resource type="Texture2D" uid="uid://ofgx0p4qy6gr" path="res://images/controller_icons/playstation_button_color_circle.png" id="11_bwdex"]
+[ext_resource type="Texture2D" uid="uid://c40hbys7bfjss" path="res://images/controller_icons/playstation_button_color_triangle.png" id="12_002ow"]
+[ext_resource type="Texture2D" uid="uid://cuvpyl3a1flrs" path="res://images/controller_icons/playstation_trigger_r1_alternative.png" id="13_p51ek"]
+[ext_resource type="Texture2D" uid="uid://b8c56r7p4kit3" path="res://images/controller_icons/playstation_trigger_r2.png" id="14_7dtny"]
+[ext_resource type="Texture2D" uid="uid://7wuq5kxkih30" path="res://images/controller_icons/r3.png" id="15_ipbbu"]
+[ext_resource type="Texture2D" uid="uid://6385eynv4j8q" path="res://images/controller_icons/playstation_trigger_l1_alternative.png" id="16_gdfhw"]
+[ext_resource type="Texture2D" uid="uid://b2tidf8da662b" path="res://images/controller_icons/playstation_trigger_l2.png" id="17_nntea"]
+[ext_resource type="Texture2D" uid="uid://ch22t1b5hwnkg" path="res://images/controller_icons/l3.png" id="18_2cmys"]
+[ext_resource type="Texture2D" uid="uid://dnjnh3eeas3t5" path="res://images/controller_icons/playstation_dpad_up_outline.png" id="19_ejyj7"]
+[ext_resource type="Texture2D" uid="uid://cenfvmr3kypri" path="res://images/controller_icons/playstation_dpad_right_outline.png" id="20_o6gq3"]
+[ext_resource type="Texture2D" uid="uid://0tg5575sx5ml" path="res://images/controller_icons/playstation_dpad_down_outline.png" id="21_eielw"]
+[ext_resource type="Texture2D" uid="uid://cgc6o230d1uox" path="res://images/controller_icons/playstation_dpad_left_outline.png" id="22_driv7"]
+[ext_resource type="Texture2D" uid="uid://cipoxil42erf8" path="res://images/controller_icons/lstick_up.png" id="23_nx4y8"]
+[ext_resource type="Texture2D" uid="uid://nf355xgs36ig" path="res://images/controller_icons/lstick_right.png" id="24_n4yoo"]
+[ext_resource type="Texture2D" uid="uid://rwhifgnni63k" path="res://images/controller_icons/lstick_down.png" id="25_6axg2"]
+[ext_resource type="Texture2D" uid="uid://b5ct4funwgs1l" path="res://images/controller_icons/lstick_left.png" id="26_6cu4n"]
+[ext_resource type="Texture2D" uid="uid://ctp0htujdbti8" path="res://images/controller_icons/rstick_up.png" id="27_foopv"]
+[ext_resource type="Texture2D" uid="uid://d2kglsocf1rmn" path="res://images/controller_icons/rstick_right.png" id="28_h01xl"]
+[ext_resource type="Texture2D" uid="uid://dqwd01wo5csbs" path="res://images/controller_icons/rstick_down.png" id="29_745ic"]
+[ext_resource type="Texture2D" uid="uid://cx1ahjv88mmfj" path="res://images/controller_icons/rstick_left.png" id="30_khsfe"]
+[ext_resource type="Texture2D" uid="uid://camr650emlll4" path="res://images/controller_icons/playstation_touchpad.png" id="31_bpe4j"]
+[ext_resource type="Texture2D" uid="uid://bjteq6uxs6vrt" path="res://images/controller_icons/playstation_touchpad_left_click.png" id="32_sg3aa"]
+[ext_resource type="Texture2D" uid="uid://bs30coc5cqotm" path="res://images/controller_icons/playstation_touchpad_right_click.png" id="33_n1hiy"]
+[ext_resource type="Texture2D" uid="uid://chs2vya2r14gd" path="res://images/controller_icons/playstation_button_share.png" id="34_vuetd"]
+[ext_resource type="Texture2D" uid="uid://c567ab21ybvej" path="res://images/controller_icons/playstation_button_options.png" id="35_miwnh"]
+[ext_resource type="Texture2D" uid="uid://dw2sxqg1wyxu3" path="res://images/controller_icons/xbox_button_color_y.png" id="36_qm62l"]
+[ext_resource type="Texture2D" uid="uid://c5sftif4r1osh" path="res://images/controller_icons/xbox_button_color_x.png" id="37_wv6ia"]
+[ext_resource type="Texture2D" uid="uid://caqbpsg3c24e4" path="res://images/controller_icons/xbox_button_color_a.png" id="38_y6co3"]
+[ext_resource type="Texture2D" uid="uid://dnucneur3qy8g" path="res://images/controller_icons/xbox_button_color_b.png" id="39_whl64"]
+[ext_resource type="Texture2D" uid="uid://ccwdgelvds8ba" path="res://images/controller_icons/xbox_rb.png" id="40_28v5x"]
+[ext_resource type="Texture2D" uid="uid://5deqk2asetoe" path="res://images/controller_icons/xbox_rt.png" id="41_kcowg"]
+[ext_resource type="Texture2D" uid="uid://cb7xwi7bbuajx" path="res://images/controller_icons/xbox_lb.png" id="42_l5qiv"]
+[ext_resource type="Texture2D" uid="uid://byksa3amp3r3u" path="res://images/controller_icons/xbox_lt.png" id="43_jwds3"]
+[ext_resource type="Texture2D" uid="uid://b5r66sv02hofx" path="res://images/controller_icons/xbox_dpad_up_outline.png" id="44_4ym8q"]
+[ext_resource type="Texture2D" uid="uid://c2hwiimk1eakw" path="res://images/controller_icons/xbox_dpad_right_outline.png" id="45_q1r26"]
+[ext_resource type="Texture2D" uid="uid://oj08t4171q32" path="res://images/controller_icons/xbox_dpad_down_outline.png" id="46_qppyy"]
+[ext_resource type="Texture2D" uid="uid://g8gnm73hr7ic" path="res://images/controller_icons/xbox_dpad_left_outline.png" id="47_2vqkl"]
+[ext_resource type="Texture2D" uid="uid://dn2yfa0dt70qh" path="res://images/controller_icons/xbox_button_menu.png" id="48_ijay5"]
+[ext_resource type="Texture2D" uid="uid://137i27yqlqjo" path="res://images/controller_icons/xbox_button_view.png" id="49_ujd6d"]
+[ext_resource type="Texture2D" uid="uid://dq4eo6u4srqov" path="res://images/controller_icons/xbox_button_share.png" id="50_lrn1f"]
+[ext_resource type="Texture2D" uid="uid://in6840us04pn" path="res://images/controller_icons/switch_button_x.png" id="51_aaaaa"]
+[ext_resource type="Texture2D" uid="uid://rxjtahjhlxbi" path="res://images/controller_icons/switch_button_y.png" id="52_x7cm6"]
+[ext_resource type="Texture2D" uid="uid://0oaehypw20un" path="res://images/controller_icons/switch_button_a.png" id="53_o6yri"]
+[ext_resource type="Texture2D" uid="uid://yw7ngcxhli1h" path="res://images/controller_icons/switch_button_b.png" id="54_nby1u"]
+[ext_resource type="Texture2D" uid="uid://q6afaj6adrfo" path="res://images/controller_icons/switch_button_sl.png" id="55_1yx05"]
+[ext_resource type="Texture2D" uid="uid://djoe8bkis8uip" path="res://images/controller_icons/switch_button_sr.png" id="56_xhm77"]
+[ext_resource type="Texture2D" uid="uid://pnv2uq2nq6ql" path="res://images/controller_icons/switch_button_zl.png" id="57_e14ip"]
+[ext_resource type="Texture2D" uid="uid://cevbtgv3r0egu" path="res://images/controller_icons/switch_button_zr.png" id="58_8sx2j"]
+[ext_resource type="Texture2D" uid="uid://dhwvn8kg472ph" path="res://images/controller_icons/switch_dpad_up_outline.png" id="59_jp040"]
+[ext_resource type="Texture2D" uid="uid://hqi1hfko77l7" path="res://images/controller_icons/switch_dpad_right_outline.png" id="60_q6rog"]
+[ext_resource type="Texture2D" uid="uid://d34urdxqiln5g" path="res://images/controller_icons/switch_dpad_down_outline.png" id="61_ysh7o"]
+[ext_resource type="Texture2D" uid="uid://ook7riyoi6r3" path="res://images/controller_icons/switch_dpad_left_outline.png" id="62_uepqk"]
+[ext_resource type="Texture2D" uid="uid://crmdckvcqvcam" path="res://images/controller_icons/switch_button_sync.png" id="63_568hw"]
+[ext_resource type="Texture2D" uid="uid://327lowtfa4s4" path="res://images/controller_icons/switch_button_home.png" id="64_xuntq"]
+[ext_resource type="Texture2D" uid="uid://1p3ifeymxbbi" path="res://images/controller_icons/switch_button_plus.png" id="65_57w2v"]
+[ext_resource type="Texture2D" uid="uid://deceng57ooylo" path="res://images/controller_icons/switch_button_minus.png" id="66_m0sub"]
+[ext_resource type="Texture2D" uid="uid://cqsx6rarb4mm6" path="res://images/controller_icons/mouse_left_outline.png" id="67_gb1ox"]
+[ext_resource type="Texture2D" uid="uid://dqvcatw202c2" path="res://images/controller_icons/mouse_right_outline.png" id="68_sifyi"]
+[ext_resource type="Texture2D" uid="uid://hovu8tvj1g1j" path="res://images/controller_icons/mouse_scroll_outline.png" id="69_o72o0"]
+[ext_resource type="Texture2D" uid="uid://cjttp0snn861o" path="res://images/controller_icons/mouse_scroll_up_outline.png" id="70_08bwk"]
+[ext_resource type="Texture2D" uid="uid://d3d7gbeely16r" path="res://images/controller_icons/mouse_scroll_down_outline.png" id="71_bwo4k"]
+[ext_resource type="Script" uid="uid://bxyw05g27p556" path="res://_scripts/buttons/swap_table_button.gd" id="74_ah8td"]
+[ext_resource type="Resource" uid="uid://b0jenhtbvvf1n" path="res://resources/controller_data/switch_test_cfg.tres" id="75_002ow"]
+[ext_resource type="Resource" uid="uid://booh48bk7v2nm" path="res://resources/controller_data/controller_cfg_01.tres" id="75_bwdex"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_vqs83"]
+[sub_resource type="LabelSettings" id="LabelSettings_5olmm"]
 font_size = 30
 
 [node name="Main" type="Control"]
@@ -24,22 +97,76 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.1711, 0.220642, 0.29, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="Table" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
+anchors_preset = 15
 anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="Table" node_paths=PackedStringArray("box_container_transform")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_top = -154.0
-offset_bottom = -112.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.158472, 0.158472, 0.158472, 1)
+script = ExtResource("1_eu44l")
+box_container_transform = NodePath("../VBoxContainer")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Table"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Table/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("2_8tdwu")
+
+[node name="Label" type="Label" parent="Table/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -169.5
+offset_top = -21.0
+offset_right = 169.5
+offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Controller Configurator"
-label_settings = SubResource("LabelSettings_vqs83")
+label_settings = SubResource("LabelSettings_5olmm")
 horizontal_alignment = 1
 
-[node name="Table" parent="." instance=ExtResource("1_vqs83")]
-layout_mode = 1
+[node name="HBoxContainer" type="HBoxContainer" parent="Table/VBoxContainer" node_paths=PackedStringArray("table_title")]
+layout_mode = 2
+theme_override_constants/separation = 2
+alignment = 1
+script = ExtResource("3_82xgy")
+table_title = NodePath("../Panel/Label")
+title_color = Color(0.263009, 0.492047, 0.648815, 1)
+even_color = Color(0.266575, 0.266575, 0.266575, 1)
+odd_color = Color(0.158472, 0.158472, 0.158472, 1)
+controller_cfg = ExtResource("4_ah8td")
+button_image_panel = ExtResource("6_jvxvt")
+action_text = ExtResource("7_s8k4a")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -47,7 +174,347 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_dmkxd")
+ps4_button_image_bind_dict = {
+0: {
+"image": ExtResource("9_7lldt"),
+"image_path": "res://images/controller_icons/playstation_button_color_square.png"
+},
+1: {
+"image": ExtResource("10_ah8td"),
+"image_path": "res://images/controller_icons/playstation_button_color_cross.png"
+},
+2: {
+"image": ExtResource("11_bwdex"),
+"image_path": "res://images/controller_icons/playstation_button_color_circle.png"
+},
+3: {
+"image": ExtResource("12_002ow"),
+"image_path": "res://images/controller_icons/playstation_button_color_triangle.png"
+},
+4: {
+"image": ExtResource("13_p51ek"),
+"image_path": "res://images/controller_icons/playstation_trigger_r1_alternative.png"
+},
+5: {
+"image": ExtResource("14_7dtny"),
+"image_path": "res://images/controller_icons/playstation_trigger_r2.png"
+},
+6: {
+"image": ExtResource("16_gdfhw"),
+"image_path": "res://images/controller_icons/playstation_trigger_l1_alternative.png"
+},
+7: {
+"image": ExtResource("17_nntea"),
+"image_path": "res://images/controller_icons/playstation_trigger_l2.png"
+},
+8: {
+"image": ExtResource("19_ejyj7"),
+"image_path": "res://images/controller_icons/playstation_dpad_up_outline.png"
+},
+9: {
+"image": ExtResource("20_o6gq3"),
+"image_path": "res://images/controller_icons/playstation_dpad_right_outline.png"
+},
+10: {
+"image": ExtResource("21_eielw"),
+"image_path": "res://images/controller_icons/playstation_dpad_down_outline.png"
+},
+11: {
+"image": ExtResource("22_driv7"),
+"image_path": "res://images/controller_icons/playstation_dpad_left_outline.png"
+},
+12: {
+"image": ExtResource("23_nx4y8"),
+"image_path": "res://images/controller_icons/lstick_up.png"
+},
+13: {
+"image": ExtResource("24_n4yoo"),
+"image_path": "res://images/controller_icons/lstick_right.png"
+},
+14: {
+"image": ExtResource("25_6axg2"),
+"image_path": "res://images/controller_icons/lstick_down.png"
+},
+15: {
+"image": ExtResource("26_6cu4n"),
+"image_path": "res://images/controller_icons/lstick_left.png"
+},
+16: {
+"image": ExtResource("18_2cmys"),
+"image_path": "res://images/controller_icons/l3.png"
+},
+17: {
+"image": ExtResource("27_foopv"),
+"image_path": "res://images/controller_icons/rstick_up.png"
+},
+18: {
+"image": ExtResource("28_h01xl"),
+"image_path": "res://images/controller_icons/rstick_right.png"
+},
+19: {
+"image": ExtResource("29_745ic"),
+"image_path": "res://images/controller_icons/rstick_down.png"
+},
+20: {
+"image": ExtResource("30_khsfe"),
+"image_path": "res://images/controller_icons/rstick_left.png"
+},
+21: {
+"image": ExtResource("15_ipbbu"),
+"image_path": "res://images/controller_icons/r3.png"
+},
+22: {
+"image": ExtResource("31_bpe4j"),
+"image_path": "res://images/controller_icons/playstation_touchpad.png"
+},
+23: {
+"image": ExtResource("32_sg3aa"),
+"image_path": "res://images/controller_icons/playstation_touchpad_left_click.png"
+},
+24: {
+"image": ExtResource("33_n1hiy"),
+"image_path": "res://images/controller_icons/playstation_touchpad_right_click.png"
+},
+25: {
+"image": ExtResource("34_vuetd"),
+"image_path": "res://images/controller_icons/playstation_button_share.png"
+},
+26: {
+"image": ExtResource("35_miwnh"),
+"image_path": "res://images/controller_icons/playstation_button_options.png"
+}
+}
+xbox_button_image_bind_dict = {
+0: {
+"image": ExtResource("36_qm62l"),
+"image_path": "res://images/controller_icons/xbox_button_color_y.png"
+},
+1: {
+"image": ExtResource("37_wv6ia"),
+"image_path": "res://images/controller_icons/xbox_button_color_x.png"
+},
+2: {
+"image": ExtResource("38_y6co3"),
+"image_path": "res://images/controller_icons/xbox_button_color_a.png"
+},
+3: {
+"image": ExtResource("39_whl64"),
+"image_path": "res://images/controller_icons/xbox_button_color_b.png"
+},
+4: {
+"image": ExtResource("40_28v5x"),
+"image_path": "res://images/controller_icons/xbox_rb.png"
+},
+5: {
+"image": ExtResource("41_kcowg"),
+"image_path": "res://images/controller_icons/xbox_rt.png"
+},
+6: {
+"image": ExtResource("42_l5qiv"),
+"image_path": "res://images/controller_icons/xbox_lb.png"
+},
+7: {
+"image": ExtResource("43_jwds3"),
+"image_path": "res://images/controller_icons/xbox_lt.png"
+},
+8: {
+"image": ExtResource("44_4ym8q"),
+"image_path": "res://images/controller_icons/xbox_dpad_up_outline.png"
+},
+9: {
+"image": ExtResource("45_q1r26"),
+"image_path": "res://images/controller_icons/xbox_dpad_right_outline.png"
+},
+10: {
+"image": ExtResource("46_qppyy"),
+"image_path": "res://images/controller_icons/xbox_dpad_down_outline.png"
+},
+11: {
+"image": ExtResource("47_2vqkl"),
+"image_path": "res://images/controller_icons/xbox_dpad_left_outline.png"
+},
+12: {
+"image": ExtResource("23_nx4y8"),
+"image_path": "res://images/controller_icons/lstick_up.png"
+},
+13: {
+"image": ExtResource("24_n4yoo"),
+"image_path": "res://images/controller_icons/lstick_right.png"
+},
+14: {
+"image": ExtResource("25_6axg2"),
+"image_path": "res://images/controller_icons/lstick_down.png"
+},
+15: {
+"image": ExtResource("26_6cu4n"),
+"image_path": "res://images/controller_icons/lstick_left.png"
+},
+17: {
+"image": ExtResource("27_foopv"),
+"image_path": "res://images/controller_icons/rstick_up.png"
+},
+18: {
+"image": ExtResource("28_h01xl"),
+"image_path": "res://images/controller_icons/rstick_right.png"
+},
+19: {
+"image": ExtResource("29_745ic"),
+"image_path": "res://images/controller_icons/rstick_down.png"
+},
+20: {
+"image": ExtResource("30_khsfe"),
+"image_path": "res://images/controller_icons/rstick_left.png"
+},
+22: {
+"image": ExtResource("48_ijay5"),
+"image_path": "res://images/controller_icons/xbox_button_menu.png"
+},
+23: {
+"image": ExtResource("49_ujd6d"),
+"image_path": "res://images/controller_icons/xbox_button_view.png"
+},
+24: {
+"image": ExtResource("50_lrn1f"),
+"image_path": "res://images/controller_icons/xbox_button_share.png"
+}
+}
+switch_button_image_bind_dict = {
+0: {
+"image": ExtResource("51_aaaaa"),
+"image_path": "res://images/controller_icons/switch_button_x.png"
+},
+1: {
+"image": ExtResource("52_x7cm6"),
+"image_path": "res://images/controller_icons/switch_button_y.png"
+},
+2: {
+"image": ExtResource("54_nby1u"),
+"image_path": "res://images/controller_icons/switch_button_b.png"
+},
+3: {
+"image": ExtResource("53_o6yri"),
+"image_path": "res://images/controller_icons/switch_button_a.png"
+},
+4: {
+"image": ExtResource("55_1yx05"),
+"image_path": "res://images/controller_icons/switch_button_sl.png"
+},
+5: {
+"image": ExtResource("56_xhm77"),
+"image_path": "res://images/controller_icons/switch_button_sr.png"
+},
+6: {
+"image": ExtResource("57_e14ip"),
+"image_path": "res://images/controller_icons/switch_button_zl.png"
+},
+7: {
+"image": ExtResource("58_8sx2j"),
+"image_path": "res://images/controller_icons/switch_button_zr.png"
+},
+8: {
+"image": ExtResource("59_jp040"),
+"image_path": "res://images/controller_icons/switch_dpad_up_outline.png"
+},
+9: {
+"image": ExtResource("60_q6rog"),
+"image_path": "res://images/controller_icons/switch_dpad_right_outline.png"
+},
+10: {
+"image": ExtResource("61_ysh7o"),
+"image_path": "res://images/controller_icons/switch_dpad_down_outline.png"
+},
+11: {
+"image": ExtResource("62_uepqk"),
+"image_path": "res://images/controller_icons/switch_dpad_left_outline.png"
+},
+12: {
+"image": ExtResource("23_nx4y8"),
+"image_path": "res://images/controller_icons/lstick_up.png"
+},
+13: {
+"image": ExtResource("24_n4yoo"),
+"image_path": "res://images/controller_icons/lstick_right.png"
+},
+14: {
+"image": ExtResource("25_6axg2"),
+"image_path": "res://images/controller_icons/lstick_down.png"
+},
+15: {
+"image": ExtResource("26_6cu4n"),
+"image_path": "res://images/controller_icons/lstick_left.png"
+},
+17: {
+"image": ExtResource("27_foopv"),
+"image_path": "res://images/controller_icons/rstick_up.png"
+},
+18: {
+"image": ExtResource("28_h01xl"),
+"image_path": "res://images/controller_icons/rstick_right.png"
+},
+19: {
+"image": ExtResource("29_745ic"),
+"image_path": "res://images/controller_icons/rstick_down.png"
+},
+20: {
+"image": ExtResource("30_khsfe"),
+"image_path": "res://images/controller_icons/rstick_left.png"
+},
+22: {
+"image": ExtResource("63_568hw"),
+"image_path": "res://images/controller_icons/switch_button_sync.png"
+},
+23: {
+"image": ExtResource("64_xuntq"),
+"image_path": "res://images/controller_icons/switch_button_home.png"
+},
+24: {
+"image": ExtResource("65_57w2v"),
+"image_path": "res://images/controller_icons/switch_button_plus.png"
+},
+25: {
+"image": ExtResource("66_m0sub"),
+"image_path": "res://images/controller_icons/switch_button_minus.png"
+}
+}
+mouse_button_image_bind_dict = {
+0: {
+"image": ExtResource("67_gb1ox"),
+"image_path": "res://images/controller_icons/mouse_left_outline.png"
+},
+1: {
+"image": ExtResource("68_sifyi"),
+"image_path": "res://images/controller_icons/mouse_right_outline.png"
+},
+2: {
+"image": ExtResource("69_o72o0"),
+"image_path": "res://images/controller_icons/mouse_scroll_outline.png"
+},
+3: {
+"image": ExtResource("70_08bwk"),
+"image_path": "res://images/controller_icons/mouse_scroll_up_outline.png"
+},
+4: {
+"image": ExtResource("71_bwo4k"),
+"image_path": "res://images/controller_icons/mouse_scroll_down_outline.png"
+}
+}
 
 [node name="Node" type="Node" parent="."]
 script = ExtResource("3_nvkn0")
-name_of_file = "ps4_basic"
+controller_type = 2
+name_of_file = "switch_test"
+
+[node name="cache" type="Node" parent="."]
+script = ExtResource("10_8tdwu")
+
+[node name="Button" type="Button" parent="." node_paths=PackedStringArray("r_table_generator")]
+layout_mode = 0
+offset_left = 539.0
+offset_top = 587.0
+offset_right = 617.0
+offset_bottom = 618.0
+text = "SWAP"
+script = ExtResource("74_ah8td")
+r_table_generator = NodePath("../Table/VBoxContainer/HBoxContainer")
+r_controller_cfg = Array[ExtResource("5_t870e")]([ExtResource("75_002ow"), ExtResource("75_bwdex"), ExtResource("4_ah8td")])
+metadata/_edit_group_ = true

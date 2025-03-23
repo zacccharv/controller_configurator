@@ -1,5 +1,4 @@
 # Godot 4+ specific ignores
-**.uid
-**.import
 .godot/
 /android/
+game_scenes/main_theme.tres
