@@ -9,7 +9,7 @@ extends HBoxContainer
 @export var even_color: Color
 @export var odd_color: Color
 
-@export var controller_cfg: controller_config
+@export var r_controller_cfg: controller_config
 @export var button_image_panel: PackedScene
 @export var action_text: PackedScene
 
@@ -43,7 +43,7 @@ func generate_grid():
 	for child in children:
 		child.free()
 
-	table_title.text = controller_cfg.config_name
+	table_title.text = r_controller_cfg.config_name
 
 	# create the columns
 	for column_index in range(3):
@@ -53,8 +53,8 @@ func generate_grid():
 		generate_panel_text(0, col, COLUMN_TITLES[column_index], 20)
 
 		# Add data rows
-		for row in range(controller_cfg.config_controller.controller_buttons.size()):
-				var m_button_remap_row: button_remap_row = controller_cfg.config_controller.controller_buttons[row]
+		for row in range(r_controller_cfg.config_controller.controller_buttons.size() - 1):
+				var m_button_remap_row: button_remap_row = r_controller_cfg.config_controller.controller_buttons[row]
 
 				# Adjust row index for styling (title is row 0)
 				var display_row = row + 1
@@ -77,6 +77,12 @@ func generate_panel_text_box(row: int, vbox: VBoxContainer):
 
 	panel.size_flags_horizontal = Control.SIZE_FILL
 	var label: Node = action_text.instantiate()
+	var le: input_to_config_data = label.get_node("./Panel/LineEdit")
+
+	(label.get_node("./Panel/LineEdit") as LineEdit).text = r_controller_cfg.config_controller.controller_buttons[row].remap_action
+
+	le.row_index = row
+	le.r_controller_config = r_controller_cfg
 
 	panel.add_child(label)
 
@@ -185,4 +191,3 @@ func load_texture_safely(dict: Dictionary, index: int, fallback_string: String) 
 		push_error("Invalid button index or missing image_path: " + str(index))
 
 	return load(fallback_string) # Add a fallback texture path
-

@@ -1,12 +1,12 @@
-[gd_resource type="Resource" script_class="controller_config" load_steps=87 format=3 uid="uid://b0jenhtbvvf1n"]
+[gd_resource type="Resource" script_class="controller_config" load_steps=87 format=3]
 
-[ext_resource type="Script" uid="uid://bgt8dvhd2y7us" path="res://_scripts/resource_classes/button_remap_row.gd" id="1_chvwr"]
-[ext_resource type="Script" uid="uid://csrlq2uh0iwk5" path="res://_scripts/enumerations/switch_enums_holder.gd" id="2_ffb0s"]
-[ext_resource type="Resource" uid="uid://5x4kb6iy36w3" path="res://resources/controller_data/button_holders/switch_buttons.tres" id="3_i8q0q"]
-[ext_resource type="Resource" uid="uid://3r7c8ikj7vig" path="res://resources/controller_data/button_holders/mouse_buttons.tres" id="4_xsf1s"]
-[ext_resource type="Resource" uid="uid://84g3jho048rq" path="res://resources/controller_data/button_holders/keyboard_keys.tres" id="5_uuimj"]
-[ext_resource type="Script" uid="uid://q57uirpdejuf" path="res://_scripts/resource_classes/controller_resource.gd" id="6_l2kr0"]
-[ext_resource type="Script" uid="uid://n8xx2nkain1q" path="res://_scripts/resource_classes/controller_config.gd" id="7_eqsks"]
+[ext_resource type="Script" path="res://_scripts/resource_classes/button_remap_row.gd" id="1_chvwr"]
+[ext_resource type="Script" path="res://_scripts/enumerations/switch_enums_holder.gd" id="2_ffb0s"]
+[ext_resource type="Resource" path="res://resources/controller_data/button_holders/switch_buttons.tres" id="3_i8q0q"]
+[ext_resource type="Resource" path="res://resources/controller_data/button_holders/mouse_buttons.tres" id="4_xsf1s"]
+[ext_resource type="Resource" path="res://resources/controller_data/button_holders/keyboard_keys.tres" id="5_uuimj"]
+[ext_resource type="Script" path="res://_scripts/resource_classes/controller_resource.gd" id="6_l2kr0"]
+[ext_resource type="Script" path="res://_scripts/resource_classes/controller_config.gd" id="7_eqsks"]
 
 [sub_resource type="Resource" id="Resource_httm5"]
 script = ExtResource("2_ffb0s")
@@ -185,7 +185,7 @@ switch_buttons = 11
 script = ExtResource("1_chvwr")
 button = SubResource("Resource_xdxcc")
 remap_button = SubResource("Resource_3pal1")
-remap_action = ""
+remap_action = "Down"
 remap_button_controller = [ExtResource("3_i8q0q"), ExtResource("4_xsf1s"), ExtResource("5_uuimj")]
 
 [sub_resource type="Resource" id="Resource_42882"]
@@ -398,11 +398,11 @@ remap_button = SubResource("Resource_nh5ro")
 remap_action = ""
 remap_button_controller = [ExtResource("3_i8q0q"), ExtResource("4_xsf1s"), ExtResource("5_uuimj")]
 
-[sub_resource type="Resource" id="Resource_gebh8"]
+[sub_resource type="Resource" id="Resource_chvwr"]
 script = ExtResource("6_l2kr0")
 controller_buttons = Array[ExtResource("1_chvwr")]([SubResource("Resource_vxuyd"), SubResource("Resource_67gvp"), SubResource("Resource_rxl3m"), SubResource("Resource_vis3m"), SubResource("Resource_rvgla"), SubResource("Resource_vhm20"), SubResource("Resource_ld4pq"), SubResource("Resource_oesni"), SubResource("Resource_78qoe"), SubResource("Resource_okka2"), SubResource("Resource_rydw4"), SubResource("Resource_jaqxe"), SubResource("Resource_a628g"), SubResource("Resource_k3b3p"), SubResource("Resource_ybuxp"), SubResource("Resource_tkjs6"), SubResource("Resource_mj0pt"), SubResource("Resource_ava0a"), SubResource("Resource_54k40"), SubResource("Resource_nioe2"), SubResource("Resource_xl631"), SubResource("Resource_t6wl8"), SubResource("Resource_d28qj"), SubResource("Resource_jdnt1"), SubResource("Resource_l1ix1"), SubResource("Resource_drflo")])
 
 [resource]
 script = ExtResource("7_eqsks")
 config_name = "switch_test"
-config_controller = SubResource("Resource_gebh8")
+config_controller = SubResource("Resource_chvwr")

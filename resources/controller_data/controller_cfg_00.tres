@@ -1,9 +1,450 @@
-[gd_resource type="Resource" script_class="controller_config" load_steps=3 format=3 uid="uid://l3c4lmebrcu2"]
+[gd_resource type="Resource" script_class="controller_config" load_steps=90 format=3 uid="uid://cx4f72mc7agoo"]
 
-[ext_resource type="Resource" uid="uid://v57klihgyr0i" path="res://resources/controller_data/ps4_basic.tres" id="1_c3ei8"]
+[ext_resource type="Script" uid="uid://bgt8dvhd2y7us" path="res://_scripts/resource_classes/button_remap_row.gd" id="1_d7wt4"]
+[ext_resource type="Script" uid="uid://cfnqqjq6wb6od" path="res://_scripts/enumerations/ps4_enums_holder.gd" id="2_i16m0"]
 [ext_resource type="Script" uid="uid://n8xx2nkain1q" path="res://_scripts/resource_classes/controller_config.gd" id="3_a1qk3"]
+[ext_resource type="Resource" uid="uid://7ukd3ulijy2v" path="res://resources/controller_data/button_holders/ps4_buttons.tres" id="3_hogq5"]
+[ext_resource type="Resource" uid="uid://3r7c8ikj7vig" path="res://resources/controller_data/button_holders/mouse_buttons.tres" id="4_qwue1"]
+[ext_resource type="Resource" uid="uid://84g3jho048rq" path="res://resources/controller_data/button_holders/keyboard_keys.tres" id="5_usj8x"]
+[ext_resource type="Script" uid="uid://q57uirpdejuf" path="res://_scripts/resource_classes/controller_resource.gd" id="6_yj2tu"]
+
+[sub_resource type="Resource" id="Resource_edg1d"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 0
+
+[sub_resource type="Resource" id="Resource_h3jbp"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 0
+
+[sub_resource type="Resource" id="Resource_j5p53"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_edg1d")
+remap_button = SubResource("Resource_h3jbp")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_t7411"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 1
+
+[sub_resource type="Resource" id="Resource_7xefq"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 1
+
+[sub_resource type="Resource" id="Resource_ukxqc"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_t7411")
+remap_button = SubResource("Resource_7xefq")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_88vm6"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 2
+
+[sub_resource type="Resource" id="Resource_wdo7v"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 2
+
+[sub_resource type="Resource" id="Resource_7x3et"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_88vm6")
+remap_button = SubResource("Resource_wdo7v")
+remap_action = "LordyLordy"
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_b5w31"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 3
+
+[sub_resource type="Resource" id="Resource_1vxi1"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 3
+
+[sub_resource type="Resource" id="Resource_mo624"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_b5w31")
+remap_button = SubResource("Resource_1vxi1")
+remap_action = "Jo"
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_c0iwb"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 4
+
+[sub_resource type="Resource" id="Resource_xy80v"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 4
+
+[sub_resource type="Resource" id="Resource_7cc8i"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_c0iwb")
+remap_button = SubResource("Resource_xy80v")
+remap_action = "Triangle"
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_ss1dk"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 5
+
+[sub_resource type="Resource" id="Resource_o8u4h"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 5
+
+[sub_resource type="Resource" id="Resource_wy42o"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_ss1dk")
+remap_button = SubResource("Resource_o8u4h")
+remap_action = "zczxuj"
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_8sw5y"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 6
+
+[sub_resource type="Resource" id="Resource_8e5ux"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 6
+
+[sub_resource type="Resource" id="Resource_w6g3m"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_8sw5y")
+remap_button = SubResource("Resource_8e5ux")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_a1ffn"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 7
+
+[sub_resource type="Resource" id="Resource_3uypa"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 7
+
+[sub_resource type="Resource" id="Resource_44c8h"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_a1ffn")
+remap_button = SubResource("Resource_3uypa")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_7xd6m"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 8
+
+[sub_resource type="Resource" id="Resource_mrb40"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 8
+
+[sub_resource type="Resource" id="Resource_ulgcb"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_7xd6m")
+remap_button = SubResource("Resource_mrb40")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_mw7ay"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 9
+
+[sub_resource type="Resource" id="Resource_tr638"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 9
+
+[sub_resource type="Resource" id="Resource_a2wty"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_mw7ay")
+remap_button = SubResource("Resource_tr638")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_7hqqe"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 10
+
+[sub_resource type="Resource" id="Resource_66upv"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 10
+
+[sub_resource type="Resource" id="Resource_c3fxa"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_7hqqe")
+remap_button = SubResource("Resource_66upv")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_j88eu"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 11
+
+[sub_resource type="Resource" id="Resource_1e03e"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 11
+
+[sub_resource type="Resource" id="Resource_uidcv"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_j88eu")
+remap_button = SubResource("Resource_1e03e")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_4tg38"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 12
+
+[sub_resource type="Resource" id="Resource_u87hy"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 12
+
+[sub_resource type="Resource" id="Resource_qeyqb"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_4tg38")
+remap_button = SubResource("Resource_u87hy")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_x7bdv"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 13
+
+[sub_resource type="Resource" id="Resource_jln56"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 13
+
+[sub_resource type="Resource" id="Resource_jv323"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_x7bdv")
+remap_button = SubResource("Resource_jln56")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_31cbh"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 14
+
+[sub_resource type="Resource" id="Resource_gof82"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 14
+
+[sub_resource type="Resource" id="Resource_tg4lu"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_31cbh")
+remap_button = SubResource("Resource_gof82")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_y5s5n"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 15
+
+[sub_resource type="Resource" id="Resource_d6si6"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 15
+
+[sub_resource type="Resource" id="Resource_13c1o"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_y5s5n")
+remap_button = SubResource("Resource_d6si6")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_mu7xy"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 16
+
+[sub_resource type="Resource" id="Resource_86fx5"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 16
+
+[sub_resource type="Resource" id="Resource_7xlwd"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_mu7xy")
+remap_button = SubResource("Resource_86fx5")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_cgdrc"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 17
+
+[sub_resource type="Resource" id="Resource_a7u27"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 17
+
+[sub_resource type="Resource" id="Resource_ai8u4"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_cgdrc")
+remap_button = SubResource("Resource_a7u27")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_isplm"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 18
+
+[sub_resource type="Resource" id="Resource_jyien"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 18
+
+[sub_resource type="Resource" id="Resource_tuc6b"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_isplm")
+remap_button = SubResource("Resource_jyien")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_kf5gs"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 19
+
+[sub_resource type="Resource" id="Resource_vbo7s"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 19
+
+[sub_resource type="Resource" id="Resource_w05ke"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_kf5gs")
+remap_button = SubResource("Resource_vbo7s")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_wvm1r"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 20
+
+[sub_resource type="Resource" id="Resource_g224k"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 20
+
+[sub_resource type="Resource" id="Resource_cjddn"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_wvm1r")
+remap_button = SubResource("Resource_g224k")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_m2fv0"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 21
+
+[sub_resource type="Resource" id="Resource_2afn8"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 21
+
+[sub_resource type="Resource" id="Resource_u3ynb"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_m2fv0")
+remap_button = SubResource("Resource_2afn8")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_l2kwn"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 22
+
+[sub_resource type="Resource" id="Resource_fypwa"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 22
+
+[sub_resource type="Resource" id="Resource_1d1dl"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_l2kwn")
+remap_button = SubResource("Resource_fypwa")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_gmuma"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 23
+
+[sub_resource type="Resource" id="Resource_hemkc"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 23
+
+[sub_resource type="Resource" id="Resource_yax0r"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_gmuma")
+remap_button = SubResource("Resource_hemkc")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_nlfot"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 24
+
+[sub_resource type="Resource" id="Resource_j2pvf"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 24
+
+[sub_resource type="Resource" id="Resource_3qoxt"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_nlfot")
+remap_button = SubResource("Resource_j2pvf")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_vtrlm"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 25
+
+[sub_resource type="Resource" id="Resource_7l053"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 25
+
+[sub_resource type="Resource" id="Resource_ec0mh"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_vtrlm")
+remap_button = SubResource("Resource_7l053")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_tdi2d"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 26
+
+[sub_resource type="Resource" id="Resource_6ff20"]
+script = ExtResource("2_i16m0")
+ps4_buttons = 26
+
+[sub_resource type="Resource" id="Resource_14386"]
+script = ExtResource("1_d7wt4")
+button = SubResource("Resource_tdi2d")
+remap_button = SubResource("Resource_6ff20")
+remap_action = ""
+remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
+metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_d7wt4"]
+script = ExtResource("6_yj2tu")
+controller_buttons = Array[ExtResource("1_d7wt4")]([SubResource("Resource_j5p53"), SubResource("Resource_ukxqc"), SubResource("Resource_7x3et"), SubResource("Resource_mo624"), SubResource("Resource_7cc8i"), SubResource("Resource_wy42o"), SubResource("Resource_w6g3m"), SubResource("Resource_44c8h"), SubResource("Resource_ulgcb"), SubResource("Resource_a2wty"), SubResource("Resource_c3fxa"), SubResource("Resource_uidcv"), SubResource("Resource_qeyqb"), SubResource("Resource_jv323"), SubResource("Resource_tg4lu"), SubResource("Resource_13c1o"), SubResource("Resource_7xlwd"), SubResource("Resource_ai8u4"), SubResource("Resource_tuc6b"), SubResource("Resource_w05ke"), SubResource("Resource_cjddn"), SubResource("Resource_u3ynb"), SubResource("Resource_1d1dl"), SubResource("Resource_yax0r"), SubResource("Resource_3qoxt"), SubResource("Resource_ec0mh"), SubResource("Resource_14386")])
 
 [resource]
 script = ExtResource("3_a1qk3")
 config_name = "PS4"
-config_controller = ExtResource("1_c3ei8")
+config_controller = SubResource("Resource_d7wt4")

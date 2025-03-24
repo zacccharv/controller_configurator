@@ -8,7 +8,7 @@ func _ready():
 	self.pressed.connect(_on_pressed)
 
 func _on_pressed():
-	r_table_generator.controller_cfg = r_controller_cfg[r_index]
+	r_table_generator.r_controller_cfg = r_controller_cfg[r_index]
 
 	r_index += 1
 	if r_index >= r_controller_cfg.size():

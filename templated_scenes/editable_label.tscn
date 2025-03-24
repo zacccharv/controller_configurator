@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://clnwoi4ueektg"]
+[gd_scene load_steps=3 format=3 uid="uid://clnwoi4ueektg"]
 
 [ext_resource type="StyleBox" uid="uid://dvajegq5ut7ea" path="res://resources/panel_style.tres" id="1_20e7p"]
+[ext_resource type="Script" uid="uid://du5t3hxs4uip7" path="res://_scripts/input_to_config_data.gd" id="2_20e7p"]
 
 [node name="editable_label" type="Control"]
 custom_minimum_size = Vector2(150, 38)
@@ -27,3 +28,4 @@ grow_horizontal = 2
 grow_vertical = 2
 placeholder_text = "Unassigned"
 alignment = 1
+script = ExtResource("2_20e7p")
