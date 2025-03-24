@@ -73,7 +73,7 @@
 [ext_resource type="Texture2D" uid="uid://cjttp0snn861o" path="res://images/controller_icons/mouse_scroll_up_outline.png" id="70_08bwk"]
 [ext_resource type="Texture2D" uid="uid://d3d7gbeely16r" path="res://images/controller_icons/mouse_scroll_down_outline.png" id="71_bwo4k"]
 [ext_resource type="Script" uid="uid://bxyw05g27p556" path="res://_scripts/buttons/swap_table_button.gd" id="74_ah8td"]
-[ext_resource type="Resource" uid="uid://b0jenhtbvvf1n" path="res://resources/controller_data/switch_test_cfg.tres" id="75_002ow"]
+[ext_resource type="Resource" uid="uid://bdc4ljmk5do11" path="res://resources/controller_data/switch_test_cfg.tres" id="75_002ow"]
 [ext_resource type="Resource" uid="uid://booh48bk7v2nm" path="res://resources/controller_data/controller_cfg_01.tres" id="75_bwdex"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5olmm"]

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="controller_config" load_steps=90 format=3 uid="uid://cx4f72mc7agoo"]
+[gd_resource type="Resource" script_class="controller_config" load_steps=90 format=3 uid="uid://ccgq0w03vqbxb"]
 
 [ext_resource type="Script" uid="uid://bgt8dvhd2y7us" path="res://_scripts/resource_classes/button_remap_row.gd" id="1_d7wt4"]
 [ext_resource type="Script" uid="uid://cfnqqjq6wb6od" path="res://_scripts/enumerations/ps4_enums_holder.gd" id="2_i16m0"]
@@ -36,7 +36,7 @@ ps4_buttons = 1
 script = ExtResource("1_d7wt4")
 button = SubResource("Resource_t7411")
 remap_button = SubResource("Resource_7xefq")
-remap_action = ""
+remap_action = "Jump"
 remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 
@@ -52,7 +52,7 @@ ps4_buttons = 2
 script = ExtResource("1_d7wt4")
 button = SubResource("Resource_88vm6")
 remap_button = SubResource("Resource_wdo7v")
-remap_action = "LordyLordy"
+remap_action = "Scream"
 remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 
@@ -68,7 +68,7 @@ ps4_buttons = 3
 script = ExtResource("1_d7wt4")
 button = SubResource("Resource_b5w31")
 remap_button = SubResource("Resource_1vxi1")
-remap_action = "Jo"
+remap_action = "Hop"
 remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 
@@ -84,7 +84,7 @@ ps4_buttons = 4
 script = ExtResource("1_d7wt4")
 button = SubResource("Resource_c0iwb")
 remap_button = SubResource("Resource_xy80v")
-remap_action = "Triangle"
+remap_action = "Parry"
 remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 
@@ -100,7 +100,7 @@ ps4_buttons = 5
 script = ExtResource("1_d7wt4")
 button = SubResource("Resource_ss1dk")
 remap_button = SubResource("Resource_o8u4h")
-remap_action = "zczxuj"
+remap_action = "Floppy"
 remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 
@@ -116,7 +116,7 @@ ps4_buttons = 6
 script = ExtResource("1_d7wt4")
 button = SubResource("Resource_8sw5y")
 remap_button = SubResource("Resource_8e5ux")
-remap_action = ""
+remap_action = "Grapple"
 remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 
@@ -132,7 +132,7 @@ ps4_buttons = 7
 script = ExtResource("1_d7wt4")
 button = SubResource("Resource_a1ffn")
 remap_button = SubResource("Resource_3uypa")
-remap_action = ""
+remap_action = "Zap"
 remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 
@@ -148,7 +148,7 @@ ps4_buttons = 8
 script = ExtResource("1_d7wt4")
 button = SubResource("Resource_7xd6m")
 remap_button = SubResource("Resource_mrb40")
-remap_action = ""
+remap_action = "Smiling"
 remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 
@@ -156,15 +156,15 @@ metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 script = ExtResource("2_i16m0")
 ps4_buttons = 9
 
-[sub_resource type="Resource" id="Resource_tr638"]
+[sub_resource type="Resource" id="Resource_d7wt4"]
 script = ExtResource("2_i16m0")
 ps4_buttons = 9
 
 [sub_resource type="Resource" id="Resource_a2wty"]
 script = ExtResource("1_d7wt4")
 button = SubResource("Resource_mw7ay")
-remap_button = SubResource("Resource_tr638")
-remap_action = ""
+remap_button = SubResource("Resource_d7wt4")
+remap_action = "Frown"
 remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 
@@ -180,7 +180,7 @@ ps4_buttons = 10
 script = ExtResource("1_d7wt4")
 button = SubResource("Resource_7hqqe")
 remap_button = SubResource("Resource_66upv")
-remap_action = ""
+remap_action = "Choke"
 remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 
@@ -196,7 +196,7 @@ ps4_buttons = 11
 script = ExtResource("1_d7wt4")
 button = SubResource("Resource_j88eu")
 remap_button = SubResource("Resource_1e03e")
-remap_action = ""
+remap_action = "Freddy"
 remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 
@@ -212,7 +212,7 @@ ps4_buttons = 12
 script = ExtResource("1_d7wt4")
 button = SubResource("Resource_4tg38")
 remap_button = SubResource("Resource_u87hy")
-remap_action = ""
+remap_action = "Sit"
 remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 
@@ -276,23 +276,23 @@ ps4_buttons = 16
 script = ExtResource("1_d7wt4")
 button = SubResource("Resource_mu7xy")
 remap_button = SubResource("Resource_86fx5")
-remap_action = ""
+remap_action = "ijp.n"
 remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 
-[sub_resource type="Resource" id="Resource_cgdrc"]
+[sub_resource type="Resource" id="Resource_i16m0"]
 script = ExtResource("2_i16m0")
 ps4_buttons = 17
 
-[sub_resource type="Resource" id="Resource_a7u27"]
+[sub_resource type="Resource" id="Resource_hogq5"]
 script = ExtResource("2_i16m0")
 ps4_buttons = 17
 
 [sub_resource type="Resource" id="Resource_ai8u4"]
 script = ExtResource("1_d7wt4")
-button = SubResource("Resource_cgdrc")
-remap_button = SubResource("Resource_a7u27")
-remap_action = ""
+button = SubResource("Resource_i16m0")
+remap_button = SubResource("Resource_hogq5")
+remap_action = "ffffi"
 remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 
@@ -356,7 +356,7 @@ ps4_buttons = 21
 script = ExtResource("1_d7wt4")
 button = SubResource("Resource_m2fv0")
 remap_button = SubResource("Resource_2afn8")
-remap_action = ""
+remap_action = "fkhyi"
 remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 
@@ -440,11 +440,11 @@ remap_action = ""
 remap_button_controller = [ExtResource("3_hogq5"), ExtResource("4_qwue1"), ExtResource("5_usj8x")]
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 
-[sub_resource type="Resource" id="Resource_d7wt4"]
+[sub_resource type="Resource" id="Resource_qwue1"]
 script = ExtResource("6_yj2tu")
 controller_buttons = Array[ExtResource("1_d7wt4")]([SubResource("Resource_j5p53"), SubResource("Resource_ukxqc"), SubResource("Resource_7x3et"), SubResource("Resource_mo624"), SubResource("Resource_7cc8i"), SubResource("Resource_wy42o"), SubResource("Resource_w6g3m"), SubResource("Resource_44c8h"), SubResource("Resource_ulgcb"), SubResource("Resource_a2wty"), SubResource("Resource_c3fxa"), SubResource("Resource_uidcv"), SubResource("Resource_qeyqb"), SubResource("Resource_jv323"), SubResource("Resource_tg4lu"), SubResource("Resource_13c1o"), SubResource("Resource_7xlwd"), SubResource("Resource_ai8u4"), SubResource("Resource_tuc6b"), SubResource("Resource_w05ke"), SubResource("Resource_cjddn"), SubResource("Resource_u3ynb"), SubResource("Resource_1d1dl"), SubResource("Resource_yax0r"), SubResource("Resource_3qoxt"), SubResource("Resource_ec0mh"), SubResource("Resource_14386")])
 
 [resource]
 script = ExtResource("3_a1qk3")
 config_name = "PS4"
-config_controller = SubResource("Resource_d7wt4")
+config_controller = SubResource("Resource_qwue1")
