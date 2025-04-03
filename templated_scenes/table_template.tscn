@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ud5au0gntvyw" path="res://_scripts/table_background.gd" id="1_pac6i"]
 [ext_resource type="Script" uid="uid://bwh8ot86kqobo" path="res://_scripts/table_generator.gd" id="2_ap113"]
-[ext_resource type="StyleBox" uid="uid://dvajegq5ut7ea" path="res://resources/panel_style.tres" id="6_eqaru"]
+[ext_resource type="StyleBox" uid="uid://dvajegq5ut7ea" path="res://resources/styles/panel_style.tres" id="6_eqaru"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5olmm"]
 font_size = 30
