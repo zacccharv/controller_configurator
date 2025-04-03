@@ -1,14 +1,7 @@
-[gd_scene load_steps=77 format=3 uid="uid://5pv5qjfpltvg"]
+[gd_scene load_steps=69 format=3 uid="uid://5pv5qjfpltvg"]
 
-[ext_resource type="Script" uid="uid://ud5au0gntvyw" path="res://_scripts/table_background.gd" id="1_eu44l"]
-[ext_resource type="StyleBox" uid="uid://dvajegq5ut7ea" path="res://resources/panel_style.tres" id="2_8tdwu"]
-[ext_resource type="Script" uid="uid://xu5vsm5y11yk" path="res://_scripts/button_image_binds.gd" id="2_dmkxd"]
-[ext_resource type="Script" uid="uid://bwh8ot86kqobo" path="res://_scripts/table_generator.gd" id="3_82xgy"]
+[ext_resource type="Script" uid="uid://xu5vsm5y11yk" path="res://_scripts/controller_data_page/button_image_binds.gd" id="2_dmkxd"]
 [ext_resource type="Script" uid="uid://baf4a880qyb55" path="res://_scripts/tools/generate_controller_template.gd" id="3_nvkn0"]
-[ext_resource type="Resource" path="res://resources/controller_data/controller_cfg_00.tres" id="4_ah8td"]
-[ext_resource type="Script" uid="uid://n8xx2nkain1q" path="res://_scripts/resource_classes/controller_config.gd" id="5_t870e"]
-[ext_resource type="PackedScene" uid="uid://cm3m2iedf87js" path="res://templated_scenes/button_image_panel.tscn" id="6_jvxvt"]
-[ext_resource type="PackedScene" uid="uid://clnwoi4ueektg" path="res://templated_scenes/editable_label.tscn" id="7_s8k4a"]
 [ext_resource type="Texture2D" uid="uid://f2mejkytf0uy" path="res://images/controller_icons/playstation_button_color_square.png" id="9_7lldt"]
 [ext_resource type="Texture2D" uid="uid://cndhgee2plie8" path="res://images/controller_icons/playstation_button_color_cross.png" id="10_ah8td"]
 [ext_resource type="Texture2D" uid="uid://ofgx0p4qy6gr" path="res://images/controller_icons/playstation_button_color_circle.png" id="11_bwdex"]
@@ -68,16 +61,13 @@
 [ext_resource type="Texture2D" uid="uid://1p3ifeymxbbi" path="res://images/controller_icons/switch_button_plus.png" id="65_57w2v"]
 [ext_resource type="Texture2D" uid="uid://deceng57ooylo" path="res://images/controller_icons/switch_button_minus.png" id="66_m0sub"]
 [ext_resource type="Texture2D" uid="uid://cqsx6rarb4mm6" path="res://images/controller_icons/mouse_left_outline.png" id="67_gb1ox"]
+[ext_resource type="PackedScene" uid="uid://duldjl2eys3fc" path="res://templated_scenes/controller_data_page.tscn" id="67_l4ice"]
+[ext_resource type="PackedScene" uid="uid://bcrb0va1ptlp8" path="res://templated_scenes/controller_picker_page.tscn" id="68_pvull"]
 [ext_resource type="Texture2D" uid="uid://dqvcatw202c2" path="res://images/controller_icons/mouse_right_outline.png" id="68_sifyi"]
 [ext_resource type="Texture2D" uid="uid://hovu8tvj1g1j" path="res://images/controller_icons/mouse_scroll_outline.png" id="69_o72o0"]
 [ext_resource type="Texture2D" uid="uid://cjttp0snn861o" path="res://images/controller_icons/mouse_scroll_up_outline.png" id="70_08bwk"]
 [ext_resource type="Texture2D" uid="uid://d3d7gbeely16r" path="res://images/controller_icons/mouse_scroll_down_outline.png" id="71_bwo4k"]
-[ext_resource type="Script" uid="uid://bxyw05g27p556" path="res://_scripts/buttons/swap_table_button.gd" id="74_ah8td"]
-[ext_resource type="Resource" uid="uid://bdc4ljmk5do11" path="res://resources/controller_data/switch_test_cfg.tres" id="75_002ow"]
-[ext_resource type="Resource" uid="uid://booh48bk7v2nm" path="res://resources/controller_data/controller_cfg_01.tres" id="75_bwdex"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_5olmm"]
-font_size = 30
+[ext_resource type="Script" uid="uid://bcd0jnunft753" path="res://_scripts/page_picker.gd" id="76_002ow"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -87,7 +77,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="background" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -96,84 +86,21 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.1711, 0.220642, 0.29, 1)
 
-[node name="Table" type="Control" parent="."]
-layout_mode = 1
+[node name="page_picker" type="Node" parent="."]
+script = ExtResource("76_002ow")
+pages = Dictionary[String, PackedScene]({
+"controller_data_page": ExtResource("67_l4ice"),
+"controller_picker_page": ExtResource("68_pvull")
+})
+default_page = "controller_picker_page"
+
+[node name="page_root" type="Control" parent="page_picker"]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Background" type="ColorRect" parent="Table" node_paths=PackedStringArray("box_container_transform")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.158472, 0.158472, 0.158472, 1)
-script = ExtResource("1_eu44l")
-box_container_transform = NodePath("../VBoxContainer")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Table"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Panel" type="Panel" parent="Table/VBoxContainer"]
-custom_minimum_size = Vector2(0, 64)
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_styles/panel = ExtResource("2_8tdwu")
-
-[node name="Label" type="Label" parent="Table/VBoxContainer/Panel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -169.5
-offset_top = -21.0
-offset_right = 169.5
-offset_bottom = 21.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Controller Configurator"
-label_settings = SubResource("LabelSettings_5olmm")
-horizontal_alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Table/VBoxContainer" node_paths=PackedStringArray("table_title")]
-layout_mode = 2
-theme_override_constants/separation = 2
-alignment = 1
-script = ExtResource("3_82xgy")
-table_title = NodePath("../Panel/Label")
-title_color = Color(0.263009, 0.492047, 0.648815, 1)
-even_color = Color(0.158472, 0.158472, 0.158472, 1)
-odd_color = Color(0.266575, 0.266575, 0.266575, 1)
-r_controller_cfg = ExtResource("4_ah8td")
-button_image_panel = ExtResource("6_jvxvt")
-action_text = ExtResource("7_s8k4a")
-
-[node name="Button" type="Button" parent="Table/VBoxContainer" node_paths=PackedStringArray("r_table_generator")]
-layout_mode = 2
-text = "SWAP"
-script = ExtResource("74_ah8td")
-r_table_generator = NodePath("../HBoxContainer")
-r_controller_cfg = Array[ExtResource("5_t870e")]([ExtResource("75_002ow"), ExtResource("75_bwdex"), ExtResource("4_ah8td")])
-metadata/_edit_group_ = true
 
 [node name="button_images" type="Node" parent="."]
 script = ExtResource("2_dmkxd")
@@ -504,5 +431,4 @@ mouse_button_image_bind_dict = {
 
 [node name="config_generation" type="Node" parent="."]
 script = ExtResource("3_nvkn0")
-controller_type = 2
 name_of_file = "switch_test"

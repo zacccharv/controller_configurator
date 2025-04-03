@@ -1,7 +1,5 @@
 # Class that generates a table UI from a 2D array of data
-class_name table_generator
-
-extends HBoxContainer
+class_name config_table_generator extends HBoxContainer
 
 @export var table_title: Label
 
@@ -40,6 +38,7 @@ func _ready():
 func generate_grid():
 	# Clear the existing children
 	var children = get_children()
+	
 	for child in children:
 		child.free()
 

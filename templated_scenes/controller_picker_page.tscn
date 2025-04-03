@@ -1,0 +1,97 @@
+[gd_scene load_steps=8 format=3 uid="uid://bcrb0va1ptlp8"]
+
+[ext_resource type="Script" uid="uid://ud5au0gntvyw" path="res://_scripts/table_background.gd" id="1_eeift"]
+[ext_resource type="Script" uid="uid://dx0yktrgrt3pn" path="res://_scripts/controller_picker_page/config_picker_table_generator.gd" id="2_eeift"]
+[ext_resource type="Script" uid="uid://bmh51t41a0qnj" path="res://_scripts/controller_picker_page/buttons/config_picker_button.gd" id="3_ksrom"]
+[ext_resource type="Texture2D" uid="uid://1p3ifeymxbbi" path="res://images/controller_icons/switch_button_plus.png" id="4_hbvgg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eeift"]
+bg_color = Color(0, 0, 0, 0.203922)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kxjbr"]
+content_margin_bottom = 20.0
+draw_center = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_5olmm"]
+font_size = 30
+
+[node name="controller_picker_page" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="data_background" type="Panel" parent="." node_paths=PackedStringArray("box_container_transform")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_eeift")
+script = ExtResource("1_eeift")
+box_container_transform = NodePath("../title_config_picks_vbox")
+border_size = 20
+
+[node name="title_config_picks_vbox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.0
+offset_top = -58.0
+offset_right = 161.0
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="title_container" type="PanelContainer" parent="title_config_picks_vbox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_kxjbr")
+
+[node name="title" type="Label" parent="title_config_picks_vbox/title_container"]
+layout_mode = 2
+text = "Configuration Picker"
+label_settings = SubResource("LabelSettings_5olmm")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="title_config_picks_vbox"]
+layout_mode = 2
+size_flags_horizontal = 4
+script = ExtResource("2_eeift")
+
+[node name="config_picker_button" type="Button" parent="title_config_picks_vbox/VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(200, 35)
+layout_mode = 2
+text = "Configuration 1
+"
+text_overrun_behavior = 1
+clip_text = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_ksrom")
+
+[node name="add_config_button" type="Button" parent="title_config_picks_vbox/VBoxContainer"]
+custom_minimum_size = Vector2(25, 28)
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(0.4416, 0.54096, 0.69, 1)
+icon = ExtResource("4_hbvgg")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_ksrom")

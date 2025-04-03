@@ -9,7 +9,7 @@ enum ControllerType {
 	SWITCH
 }
 
-@export var controller_type: ControllerType
+@export var controller_type := ControllerType
 @export var name_of_file: String
 
 var ps4_button_row_template: button_remap_row = preload("res://resources/controller_data/remap_rows/ps4_remap_row.tres")
@@ -18,7 +18,6 @@ var switch_button_row_template: button_remap_row = preload("res://resources/cont
 
 var controller_source: controller_resource
 var r_controller_config: controller_config
-
 
 @export_tool_button("Generate", "Callable") var generate_action = _generate
 

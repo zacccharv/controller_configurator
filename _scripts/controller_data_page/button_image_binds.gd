@@ -198,6 +198,10 @@ extends Node
 		"image_path": "res://images/controller_icons/lstick_left.png",
 		"image": CompressedTexture2D.new()
 	},
+	ButtonEnums.XboxController.L3: {
+		"image_path": "res://images/controller_icons/l3.png",
+		"image": CompressedTexture2D.new()
+	},
 	#endregion Lstick
 	#region Rstick
 	ButtonEnums.XboxController.RSTICK_UP: {
@@ -214,6 +218,10 @@ extends Node
 	},
 	ButtonEnums.XboxController.RSTICK_LEFT: {
 		"image_path": "res://images/controller_icons/rstick_left.png",
+		"image": CompressedTexture2D.new()
+	},
+	ButtonEnums.XboxController.R3: {
+		"image_path": "res://images/controller_icons/r3.png",
 		"image": CompressedTexture2D.new()
 	},
 	#endregion Rstick

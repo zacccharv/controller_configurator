@@ -1,4 +1,4 @@
-extends ColorRect
+extends Panel
 
 @export var box_container_transform: BoxContainer
 @export var border_size: int = 2

@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-ButtonImageBinds="*res://_scripts/button_image_binds.gd"
+ButtonImageBinds="*res://_scripts/controller_data_page/button_image_binds.gd"
 ButtonEnums="*res://_scripts/enumerations/button_enums.gd"
 
 [gui]

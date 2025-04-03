@@ -1,0 +1,1 @@
+class_name config_picker_table_generator extends VBoxContainer

@@ -1,3 +1,4 @@
+
 extends Node
 
 enum PS4Controller {
@@ -125,3 +126,4 @@ enum Keyboard {
 	# Function keys
 	BACKSPACE, TAB, ENTER, SHIFT, CONTROL, ALT, CAPSLOCK, ESCAPE, SPACE, PAGEUP, PAGEDOWN, END, HOME, LEFT, UP, RIGHT, DOWN, INSERT, DELETE,
 }
+

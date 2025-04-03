@@ -1,11 +1,13 @@
 extends Button
 
-@export var r_table_generator: table_generator
+@export var r_table_generator: config_table_generator
 @export var r_controller_cfg: Array[controller_config]
 @export var r_index: int
 
+
 func _ready():
 	self.pressed.connect(_on_pressed)
+
 
 func _on_pressed():
 	r_table_generator.r_controller_cfg = r_controller_cfg[r_index]
