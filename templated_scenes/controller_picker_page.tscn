@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bcrb0va1ptlp8"]
+[gd_scene load_steps=9 format=3 uid="uid://bcrb0va1ptlp8"]
 
 [ext_resource type="Script" uid="uid://ud5au0gntvyw" path="res://_scripts/table_background.gd" id="1_eeift"]
 [ext_resource type="Script" uid="uid://dx0yktrgrt3pn" path="res://_scripts/controller_picker_page/config_picker_table_generator.gd" id="2_eeift"]
+[ext_resource type="PackedScene" uid="uid://b3mxsw3om2lnx" path="res://templated_scenes/config_picker_button.tscn" id="3_jfuk5"]
 [ext_resource type="Script" uid="uid://bmh51t41a0qnj" path="res://_scripts/controller_picker_page/buttons/config_picker_button.gd" id="3_ksrom"]
 [ext_resource type="Texture2D" uid="uid://1p3ifeymxbbi" path="res://images/controller_icons/switch_button_plus.png" id="4_hbvgg"]
 
@@ -74,23 +75,13 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 script = ExtResource("2_eeift")
-
-[node name="config_picker_button" type="Button" parent="title_config_picks_vbox/VBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(200, 35)
-layout_mode = 2
-text = "Configuration 1
-"
-text_overrun_behavior = 1
-clip_text = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("3_ksrom")
+button_template = ExtResource("3_jfuk5")
 
 [node name="add_config_button" type="Button" parent="title_config_picks_vbox/VBoxContainer"]
 custom_minimum_size = Vector2(25, 28)
 layout_mode = 2
 theme_override_colors/icon_normal_color = Color(0.4416, 0.54096, 0.69, 1)
+disabled = true
 icon = ExtResource("4_hbvgg")
 icon_alignment = 1
 expand_icon = true

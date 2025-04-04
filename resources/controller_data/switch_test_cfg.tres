@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="controller_config" load_steps=3 format=3 uid="uid://bdc4ljmk5do11"]
-
-[ext_resource type="Resource" uid="uid://cspusereurf5f" path="res://resources/controller_data/switch_test_source.tres" id="1_frskc"]
-[ext_resource type="Script" uid="uid://n8xx2nkain1q" path="res://_scripts/resource_classes/controller_config.gd" id="7_eqsks"]
-
-[resource]
-script = ExtResource("7_eqsks")
-config_name = "switch_test"
-config_controller = ExtResource("1_frskc")

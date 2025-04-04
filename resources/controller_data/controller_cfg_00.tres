@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="controller_config" load_steps=3 format=3 uid="uid://ccgq0w03vqbxb"]
-
-[ext_resource type="Resource" uid="uid://v57klihgyr0i" path="res://resources/controller_data/ps4_basic.tres" id="1_c3ei8"]
-[ext_resource type="Script" uid="uid://n8xx2nkain1q" path="res://_scripts/resource_classes/controller_config.gd" id="3_a1qk3"]
-
-[resource]
-script = ExtResource("3_a1qk3")
-config_name = "PS4"
-config_controller = ExtResource("1_c3ei8")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="controller_config" load_steps=3 format=3 uid="uid://booh48bk7v2nm"]
+
+[ext_resource type="Resource" uid="uid://b12n3nffoftna" path="res://resources/controller_data/configs/resources/xbox_basic.tres" id="1_n3yqf"]
+[ext_resource type="Script" uid="uid://n8xx2nkain1q" path="res://_scripts/resource_classes/controller_config.gd" id="2_adjvn"]
+
+[resource]
+script = ExtResource("2_adjvn")
+config_name = "XBOX Config"
+config_controller = ExtResource("1_n3yqf")
+metadata/_custom_type_script = "uid://n8xx2nkain1q"
