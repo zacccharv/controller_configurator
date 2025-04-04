@@ -1,7 +1,5 @@
 @tool
-class_name generate_controller_template
-
-extends Node
+class_name generate_controller_template extends Node
 
 enum ControllerType {
 	PS4,
@@ -65,7 +63,6 @@ func _generate():
 		row.remap_button = remap_holder
 
 		controller_source.controller_buttons.append(row)
-
 
 	var save_path_resource = "res://resources/controller_data/" + name_of_file + "_source.tres"
 	var save_path_config = "res://resources/controller_data/" + name_of_file + "_cfg.tres"

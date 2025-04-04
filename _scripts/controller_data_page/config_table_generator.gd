@@ -1,5 +1,6 @@
+@tool
 # Class that generates a table UI from a 2D array of data
-class_name config_table_generator extends HBoxContainer
+class_name config_table_generator extends VBoxContainer
 
 @export var table_title: Label
 
@@ -23,10 +24,20 @@ const COLUMN_TITLES = ["Original Button", "Remapped Button", "Action"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-
 	(get_node("/root/Main/page_picker") as page_picker).page_picked.connect(_on_page_picked)
 
 	# Create reusable styleboxes
+	title_style = StyleBoxFlat.new()
+	title_style.bg_color = title_color
+
+	even_style = StyleBoxFlat.new()
+	even_style.bg_color = even_color
+
+	odd_style = StyleBoxFlat.new()
+	odd_style.bg_color = odd_color
+
+func _theme_me():
+		# Create reusable styleboxes
 	title_style = StyleBoxFlat.new()
 	title_style.bg_color = title_color
 
@@ -193,6 +204,5 @@ func load_texture_safely(dict: Dictionary, index: int, fallback_string: String) 
 	return load(fallback_string) # Add a fallback texture path
 
 func _on_page_picked(config: controller_config):
-	print("Page picked: " + config.config_name)
 	r_controller_cfg = config
 	generate_grid()
