@@ -1,4 +1,3 @@
-@tool
 # Class that generates a table UI from a 2D array of data
 class_name config_table_generator extends HBoxContainer
 

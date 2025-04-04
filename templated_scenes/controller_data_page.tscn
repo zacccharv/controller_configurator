@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://duldjl2eys3fc"]
+[gd_scene load_steps=18 format=3 uid="uid://duldjl2eys3fc"]
 
 [ext_resource type="Script" uid="uid://ud5au0gntvyw" path="res://_scripts/table_background.gd" id="1_5c76l"]
 [ext_resource type="StyleBox" uid="uid://dvajegq5ut7ea" path="res://resources/styles/panel_style.tres" id="2_qjc3o"]
@@ -13,7 +13,6 @@
 [ext_resource type="StyleBox" uid="uid://ktey0iwudfni" path="res://resources/styles/exit_style_hover.tres" id="11_eh5uf"]
 [ext_resource type="StyleBox" uid="uid://b4ed6qe1kv4iq" path="res://resources/styles/exit_style.tres" id="11_qjc3o"]
 [ext_resource type="Script" uid="uid://v1235ni2hu0i" path="res://_scripts/controller_data_page/buttons/exit_button.gd" id="12_2y2f6"]
-[ext_resource type="Script" uid="uid://d4bf3xi0ux0nd" path="res://_scripts/tools/generate_test_data.gd" id="14_56yng"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5c76l"]
 bg_color = Color(0, 0, 0, 0.203922)
@@ -144,7 +143,3 @@ theme_override_styles/normal = ExtResource("11_qjc3o")
 text = "EXIT"
 script = ExtResource("12_2y2f6")
 metadata/_edit_group_ = true
-
-[node name="Node" type="Control" parent="."]
-anchors_preset = 0
-script = ExtResource("14_56yng")
