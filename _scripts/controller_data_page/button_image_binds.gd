@@ -313,6 +313,10 @@ extends Node
 		"image_path": "res://images/controller_icons/lstick_left.png",
 		"image": CompressedTexture2D.new()
 	},
+	ButtonEnums.SwitchController.L3: {
+		"image_path": "res://images/controller_icons/l3.png",
+		"image": CompressedTexture2D.new()
+	},
 	#endregion Lstick
 	#region Rstick
 	ButtonEnums.SwitchController.RSTICK_UP: {
@@ -329,6 +333,10 @@ extends Node
 	},
 	ButtonEnums.SwitchController.RSTICK_LEFT: {
 		"image_path": "res://images/controller_icons/rstick_left.png",
+		"image": CompressedTexture2D.new()
+	},
+	ButtonEnums.SwitchController.R3: {
+		"image_path": "res://images/controller_icons/r3.png",
 		"image": CompressedTexture2D.new()
 	},
 	#endregion Rstick

@@ -1,3 +1,4 @@
+@tool
 # Class that generates a table UI from a 2D array of data
 class_name config_table_generator extends HBoxContainer
 
@@ -23,6 +24,8 @@ const COLUMN_TITLES = ["Original Button", "Remapped Button", "Action"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	(get_node("/root/Main/page_picker") as page_picker).page_picked.connect(_on_page_picked)
+
 	# Create reusable styleboxes
 	title_style = StyleBoxFlat.new()
 	title_style.bg_color = title_color
@@ -33,12 +36,21 @@ func _ready():
 	odd_style = StyleBoxFlat.new()
 	odd_style.bg_color = odd_color
 
-	generate_grid()
+func _theme_me():
+		# Create reusable styleboxes
+	title_style = StyleBoxFlat.new()
+	title_style.bg_color = title_color
+
+	even_style = StyleBoxFlat.new()
+	even_style.bg_color = even_color
+
+	odd_style = StyleBoxFlat.new()
+	odd_style.bg_color = odd_color
 
 func generate_grid():
 	# Clear the existing children
 	var children = get_children()
-	
+
 	for child in children:
 		child.free()
 
@@ -122,7 +134,7 @@ func generate_panel_text(row: int, vbox: VBoxContainer, text: String, font_size:
 	label.label_settings = label_settings
 	label.text = text
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	label.add_theme_stylebox_override("normal", preload("res://resources/panel_style.tres"))
+	label.add_theme_stylebox_override("normal", preload("res://resources/styles/panel_style.tres"))
 
 	panel.add_child(label)
 	vbox.add_child(panel)
@@ -190,3 +202,7 @@ func load_texture_safely(dict: Dictionary, index: int, fallback_string: String) 
 		push_error("Invalid button index or missing image_path: " + str(index))
 
 	return load(fallback_string) # Add a fallback texture path
+
+func _on_page_picked(config: controller_config):
+	r_controller_cfg = config
+	generate_grid()
