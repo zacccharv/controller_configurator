@@ -1,9 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://duldjl2eys3fc"]
+[gd_scene load_steps=19 format=3 uid="uid://duldjl2eys3fc"]
 
 [ext_resource type="Script" uid="uid://ud5au0gntvyw" path="res://_scripts/table_background.gd" id="1_5c76l"]
 [ext_resource type="StyleBox" uid="uid://dvajegq5ut7ea" path="res://resources/styles/panel_style.tres" id="2_qjc3o"]
 [ext_resource type="Script" uid="uid://dulm5nf5b7a2c" path="res://_scripts/controller_data_page/config_table_generator.gd" id="3_2y2f6"]
 [ext_resource type="Resource" uid="uid://ccgq0w03vqbxb" path="res://resources/controller_data/configs/ps4_cfg.tres" id="4_eh5uf"]
+[ext_resource type="PackedScene" uid="uid://cm3m2iedf87js" path="res://templated_scenes/button_image_panel.tscn" id="5_56yng"]
+[ext_resource type="PackedScene" uid="uid://clnwoi4ueektg" path="res://templated_scenes/editable_label.tscn" id="6_6tiga"]
 [ext_resource type="Script" uid="uid://bxyw05g27p556" path="res://_scripts/controller_data_page/buttons/swap_table_button.gd" id="7_2s707"]
 [ext_resource type="Script" uid="uid://n8xx2nkain1q" path="res://_scripts/resource_classes/controller_config.gd" id="8_k1fhc"]
 [ext_resource type="Resource" uid="uid://b6a6a1qa5ftv3" path="res://resources/controller_data/configs/switch_cfg.tres" id="9_efpp0"]
@@ -11,6 +13,7 @@
 [ext_resource type="StyleBox" uid="uid://ktey0iwudfni" path="res://resources/styles/exit_style_hover.tres" id="11_eh5uf"]
 [ext_resource type="StyleBox" uid="uid://b4ed6qe1kv4iq" path="res://resources/styles/exit_style.tres" id="11_qjc3o"]
 [ext_resource type="Script" uid="uid://v1235ni2hu0i" path="res://_scripts/controller_data_page/buttons/exit_button.gd" id="12_2y2f6"]
+[ext_resource type="Script" uid="uid://d4bf3xi0ux0nd" path="res://_scripts/tools/generate_test_data.gd" id="14_56yng"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5c76l"]
 bg_color = Color(0, 0, 0, 0.203922)
@@ -105,11 +108,18 @@ text = "Title Of Config"
 label_settings = SubResource("LabelSettings_5olmm")
 horizontal_alignment = 1
 
-[node name="config_table_hbox" type="HBoxContainer" parent="title_table_swap_vbox"]
+[node name="config_table_hbox" type="HBoxContainer" parent="title_table_swap_vbox" node_paths=PackedStringArray("table_title")]
 layout_mode = 2
 theme_override_constants/separation = 2
 alignment = 1
 script = ExtResource("3_2y2f6")
+table_title = NodePath("../title_container/title")
+title_color = Color(0.263009, 0.492047, 0.648815, 1)
+even_color = Color(0.266575, 0.266575, 0.266575, 1)
+odd_color = Color(0.158472, 0.158472, 0.158472, 1)
+r_controller_cfg = ExtResource("10_x0qi3")
+button_image_panel = ExtResource("5_56yng")
+action_text = ExtResource("6_6tiga")
 
 [node name="swap_button" type="Button" parent="title_table_swap_vbox" node_paths=PackedStringArray("r_table_generator")]
 layout_mode = 2
@@ -134,3 +144,7 @@ theme_override_styles/normal = ExtResource("11_qjc3o")
 text = "EXIT"
 script = ExtResource("12_2y2f6")
 metadata/_edit_group_ = true
+
+[node name="Node" type="Control" parent="."]
+anchors_preset = 0
+script = ExtResource("14_56yng")
