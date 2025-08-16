@@ -184,7 +184,8 @@ func generate_remap_dropdown(row: int, buttons: controller_resource) -> Node:
 	for i in range(buttons.controller_buttons.size()):
 		var texture = get_button_value(buttons.controller_buttons[i].button)
 		dropdown.add_icon_item(texture, "")
-
+		(dropdown as OptionButton).get_popup().set_item_as_checkable(i, false)
+		
 	(dropdown as Control).custom_minimum_size = Vector2(100, BOX_HEIGHT)
 	(dropdown as Control).set_anchors_preset(Control.PRESET_FULL_RECT)
 
@@ -195,7 +196,7 @@ func generate_remap_dropdown(row: int, buttons: controller_resource) -> Node:
 
 	var popup: PopupMenu = dropdown.get_popup()
 	popup.add_theme_constant_override("icon_max_width", 32)
-	popup.add_theme_constant_override("h_separation", 50)
+	popup.add_theme_constant_override("item_start_padding", 70)
 
 	dropdown.select(dropdown.remap_index)
 	return label

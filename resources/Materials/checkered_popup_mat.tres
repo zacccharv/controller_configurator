@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://djf3xgucsfmjc"]
+
+[ext_resource type="Shader" uid="uid://br05u1s1fqpl3" path="res://resources/shaders/checkered.tres" id="1_qic1g"]
+
+[resource]
+shader = ExtResource("1_qic1g")
+shader_parameter/ColorParameter = Color(0.98, 0.7742, 0.85995, 1)
+shader_parameter/Item_Count = 10
+shader_parameter/ColorParameter2 = Color(0.1416, 0.560107, 0.59, 1)

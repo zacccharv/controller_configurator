@@ -20,6 +20,16 @@ config/icon="res://icon.svg"
 ButtonImageBinds="*res://_scripts/controller_data_page/button_image_binds.gd"
 ButtonEnums="*res://_scripts/enumerations/button_enums.gd"
 
+[file_customization]
+
+folder_colors={
+"res://_scripts/": "pink",
+"res://game_scenes/": "red",
+"res://images/": "gray",
+"res://resources/": "green",
+"res://templated_scenes/": "yellow"
+}
+
 [gui]
 
 theme/custom="uid://r7j3xncy5pod"

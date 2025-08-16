@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="controller_config" load_steps=78 format=3]
+[gd_resource type="Resource" script_class="controller_config" load_steps=78 format=3 uid="uid://bdw35h86nw6so"]
 
-[ext_resource type="Script" path="res://_scripts/resource_classes/button_remap_row.gd" id="1_i5eiu"]
-[ext_resource type="Script" path="res://_scripts/enumerations/xbox_enums_holder.gd" id="2_pu5xe"]
-[ext_resource type="Script" path="res://_scripts/resource_classes/controller_resource.gd" id="6_q6vwi"]
-[ext_resource type="Script" path="res://_scripts/resource_classes/controller_config.gd" id="7_xym1e"]
+[ext_resource type="Script" uid="uid://bgt8dvhd2y7us" path="res://_scripts/resource_classes/button_remap_row.gd" id="1_i5eiu"]
+[ext_resource type="Script" uid="uid://c01fjnkf1bhwm" path="res://_scripts/enumerations/xbox_enums_holder.gd" id="2_pu5xe"]
+[ext_resource type="Script" uid="uid://q57uirpdejuf" path="res://_scripts/resource_classes/controller_resource.gd" id="6_q6vwi"]
+[ext_resource type="Script" uid="uid://n8xx2nkain1q" path="res://_scripts/resource_classes/controller_config.gd" id="7_xym1e"]
 
 [sub_resource type="Resource" id="Resource_aq4an"]
 script = ExtResource("2_pu5xe")

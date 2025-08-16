@@ -1,23 +1,19 @@
-[gd_resource type="Resource" script_class="controller_config" load_steps=76 format=3]
+[gd_resource type="Resource" script_class="controller_config" load_steps=73 format=3 uid="uid://blwv5fgx8idm0"]
 
-[ext_resource type="Script" path="res://_scripts/resource_classes/button_remap_row.gd" id="1_nyfap"]
-[ext_resource type="Script" path="res://_scripts/enumerations/ps4_enums_holder.gd" id="2_ha66e"]
-[ext_resource type="Script" path="res://_scripts/resource_classes/controller_resource.gd" id="6_oa4lh"]
-[ext_resource type="Script" path="res://_scripts/resource_classes/controller_config.gd" id="7_84ne2"]
+[ext_resource type="Script" uid="uid://bgt8dvhd2y7us" path="res://_scripts/resource_classes/button_remap_row.gd" id="1_nyfap"]
+[ext_resource type="Script" uid="uid://cfnqqjq6wb6od" path="res://_scripts/enumerations/ps4_enums_holder.gd" id="2_ha66e"]
+[ext_resource type="Script" uid="uid://q57uirpdejuf" path="res://_scripts/resource_classes/controller_resource.gd" id="6_oa4lh"]
+[ext_resource type="Script" uid="uid://n8xx2nkain1q" path="res://_scripts/resource_classes/controller_config.gd" id="7_84ne2"]
 
 [sub_resource type="Resource" id="Resource_kcptg"]
 script = ExtResource("2_ha66e")
 ps4_buttons = 0
 
-[sub_resource type="Resource" id="Resource_y7f2e"]
-script = ExtResource("2_ha66e")
-ps4_buttons = 17
-
 [sub_resource type="Resource" id="Resource_5lh05"]
 script = ExtResource("1_nyfap")
 button = SubResource("Resource_kcptg")
-remap_button = SubResource("Resource_y7f2e")
-remap_index = 17
+remap_button = SubResource("Resource_kcptg")
+remap_index = 0
 remap_action = ""
 remap_button_controller = Array[ExtResource("7_84ne2")]([])
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
@@ -43,15 +39,11 @@ metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 script = ExtResource("2_ha66e")
 ps4_buttons = 2
 
-[sub_resource type="Resource" id="Resource_y1xrs"]
-script = ExtResource("2_ha66e")
-ps4_buttons = 10
-
 [sub_resource type="Resource" id="Resource_omxu5"]
 script = ExtResource("1_nyfap")
 button = SubResource("Resource_63vir")
-remap_button = SubResource("Resource_y1xrs")
-remap_index = 10
+remap_button = SubResource("Resource_63vir")
+remap_index = 2
 remap_action = ""
 remap_button_controller = Array[ExtResource("7_84ne2")]([])
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
@@ -77,14 +69,10 @@ metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 script = ExtResource("2_ha66e")
 ps4_buttons = 4
 
-[sub_resource type="Resource" id="Resource_k5rap"]
-script = ExtResource("2_ha66e")
-ps4_buttons = 4
-
 [sub_resource type="Resource" id="Resource_73axp"]
 script = ExtResource("1_nyfap")
 button = SubResource("Resource_0jhlw")
-remap_button = SubResource("Resource_k5rap")
+remap_button = SubResource("Resource_0jhlw")
 remap_index = 4
 remap_action = ""
 remap_button_controller = Array[ExtResource("7_84ne2")]([])
@@ -128,15 +116,15 @@ metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 script = ExtResource("2_ha66e")
 ps4_buttons = 7
 
-[sub_resource type="Resource" id="Resource_6rah1"]
+[sub_resource type="Resource" id="Resource_ob3ve"]
 script = ExtResource("2_ha66e")
-ps4_buttons = 16
+ps4_buttons = 15
 
 [sub_resource type="Resource" id="Resource_n0x3o"]
 script = ExtResource("1_nyfap")
 button = SubResource("Resource_ywggi")
-remap_button = SubResource("Resource_6rah1")
-remap_index = 16
+remap_button = SubResource("Resource_ob3ve")
+remap_index = 15
 remap_action = ""
 remap_button_controller = Array[ExtResource("7_84ne2")]([])
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
@@ -145,15 +133,11 @@ metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 script = ExtResource("2_ha66e")
 ps4_buttons = 8
 
-[sub_resource type="Resource" id="Resource_ob3ve"]
-script = ExtResource("2_ha66e")
-ps4_buttons = 15
-
 [sub_resource type="Resource" id="Resource_82r5m"]
 script = ExtResource("1_nyfap")
 button = SubResource("Resource_fc5os")
-remap_button = SubResource("Resource_ob3ve")
-remap_index = 15
+remap_button = SubResource("Resource_fc5os")
+remap_index = 8
 remap_action = ""
 remap_button_controller = Array[ExtResource("7_84ne2")]([])
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
@@ -162,18 +146,18 @@ metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 script = ExtResource("2_ha66e")
 ps4_buttons = 9
 
-[sub_resource type="Resource" id="Resource_vekv2"]
-script = ExtResource("2_ha66e")
-ps4_buttons = 12
-
 [sub_resource type="Resource" id="Resource_8ahm3"]
 script = ExtResource("1_nyfap")
 button = SubResource("Resource_0wupg")
-remap_button = SubResource("Resource_vekv2")
-remap_index = 12
+remap_button = SubResource("Resource_0wupg")
+remap_index = 9
 remap_action = ""
 remap_button_controller = Array[ExtResource("7_84ne2")]([])
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_y1xrs"]
+script = ExtResource("2_ha66e")
+ps4_buttons = 10
 
 [sub_resource type="Resource" id="Resource_sbfpm"]
 script = ExtResource("2_ha66e")
@@ -188,18 +172,18 @@ remap_action = ""
 remap_button_controller = Array[ExtResource("7_84ne2")]([])
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 
-[sub_resource type="Resource" id="Resource_2i7uj"]
-script = ExtResource("2_ha66e")
-ps4_buttons = 11
-
 [sub_resource type="Resource" id="Resource_5i0y6"]
 script = ExtResource("1_nyfap")
 button = SubResource("Resource_ymeb8")
-remap_button = SubResource("Resource_2i7uj")
+remap_button = SubResource("Resource_ymeb8")
 remap_index = 11
 remap_action = ""
 remap_button_controller = Array[ExtResource("7_84ne2")]([])
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_vekv2"]
+script = ExtResource("2_ha66e")
+ps4_buttons = 12
 
 [sub_resource type="Resource" id="Resource_iml7g"]
 script = ExtResource("2_ha66e")
@@ -218,15 +202,11 @@ metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 script = ExtResource("2_ha66e")
 ps4_buttons = 13
 
-[sub_resource type="Resource" id="Resource_wuel7"]
-script = ExtResource("2_ha66e")
-ps4_buttons = 19
-
 [sub_resource type="Resource" id="Resource_a8r0j"]
 script = ExtResource("1_nyfap")
 button = SubResource("Resource_nqpg6")
-remap_button = SubResource("Resource_wuel7")
-remap_index = 19
+remap_button = SubResource("Resource_nqpg6")
+remap_index = 13
 remap_action = ""
 remap_button_controller = Array[ExtResource("7_84ne2")]([])
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
@@ -235,14 +215,10 @@ metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 script = ExtResource("2_ha66e")
 ps4_buttons = 14
 
-[sub_resource type="Resource" id="Resource_kq1tb"]
-script = ExtResource("2_ha66e")
-ps4_buttons = 14
-
 [sub_resource type="Resource" id="Resource_nj4ww"]
 script = ExtResource("1_nyfap")
 button = SubResource("Resource_kernu")
-remap_button = SubResource("Resource_kq1tb")
+remap_button = SubResource("Resource_kernu")
 remap_index = 14
 remap_action = ""
 remap_button_controller = Array[ExtResource("7_84ne2")]([])
@@ -251,20 +227,28 @@ metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 [sub_resource type="Resource" id="Resource_ly43c"]
 script = ExtResource("1_nyfap")
 button = SubResource("Resource_ob3ve")
-remap_button = SubResource("Resource_eklrk")
-remap_index = 3
+remap_button = SubResource("Resource_ob3ve")
+remap_index = 15
 remap_action = ""
 remap_button_controller = Array[ExtResource("7_84ne2")]([])
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
 
+[sub_resource type="Resource" id="Resource_6rah1"]
+script = ExtResource("2_ha66e")
+ps4_buttons = 16
+
 [sub_resource type="Resource" id="Resource_ciile"]
 script = ExtResource("1_nyfap")
 button = SubResource("Resource_6rah1")
-remap_button = SubResource("Resource_eklrk")
-remap_index = 3
+remap_button = SubResource("Resource_6rah1")
+remap_index = 16
 remap_action = ""
 remap_button_controller = Array[ExtResource("7_84ne2")]([])
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_y7f2e"]
+script = ExtResource("2_ha66e")
+ps4_buttons = 17
 
 [sub_resource type="Resource" id="Resource_uakle"]
 script = ExtResource("2_ha66e")
@@ -295,6 +279,10 @@ remap_index = 18
 remap_action = ""
 remap_button_controller = Array[ExtResource("7_84ne2")]([])
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"
+
+[sub_resource type="Resource" id="Resource_wuel7"]
+script = ExtResource("2_ha66e")
+ps4_buttons = 19
 
 [sub_resource type="Resource" id="Resource_mnxmp"]
 script = ExtResource("2_ha66e")
@@ -346,8 +334,8 @@ ps4_buttons = 22
 [sub_resource type="Resource" id="Resource_6tsq1"]
 script = ExtResource("1_nyfap")
 button = SubResource("Resource_d3wvj")
-remap_button = SubResource("Resource_kcptg")
-remap_index = 0
+remap_button = SubResource("Resource_d3wvj")
+remap_index = 22
 remap_action = ""
 remap_button_controller = Array[ExtResource("7_84ne2")]([])
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"

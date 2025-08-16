@@ -1,5 +1,6 @@
-[gd_scene load_steps=69 format=3 uid="uid://5pv5qjfpltvg"]
+[gd_scene load_steps=71 format=3 uid="uid://5pv5qjfpltvg"]
 
+[ext_resource type="Shader" uid="uid://br05u1s1fqpl3" path="res://resources/shaders/checkered.tres" id="1_pvull"]
 [ext_resource type="Script" uid="uid://xu5vsm5y11yk" path="res://_scripts/controller_data_page/button_image_binds.gd" id="2_dmkxd"]
 [ext_resource type="Script" uid="uid://baf4a880qyb55" path="res://_scripts/tools/generate_controller_template.gd" id="3_nvkn0"]
 [ext_resource type="Texture2D" uid="uid://f2mejkytf0uy" path="res://images/controller_icons/playstation_button_color_square.png" id="9_7lldt"]
@@ -65,6 +66,7 @@
 [ext_resource type="PackedScene" uid="uid://bcrb0va1ptlp8" path="res://templated_scenes/controller_picker_page.tscn" id="68_pvull"]
 [ext_resource type="Texture2D" uid="uid://dqvcatw202c2" path="res://images/controller_icons/mouse_right_outline.png" id="68_sifyi"]
 [ext_resource type="Texture2D" uid="uid://hovu8tvj1g1j" path="res://images/controller_icons/mouse_scroll_outline.png" id="69_o72o0"]
+[ext_resource type="Script" uid="uid://gqslgcjaqch6" path="res://_scripts/shader_utils/checkered_popup.gd" id="69_pvull"]
 [ext_resource type="Texture2D" uid="uid://cjttp0snn861o" path="res://images/controller_icons/mouse_scroll_up_outline.png" id="70_08bwk"]
 [ext_resource type="Texture2D" uid="uid://d3d7gbeely16r" path="res://images/controller_icons/mouse_scroll_down_outline.png" id="71_bwo4k"]
 [ext_resource type="Script" uid="uid://bcd0jnunft753" path="res://_scripts/page_picker.gd" id="76_002ow"]
@@ -85,44 +87,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.1711, 0.220642, 0.29, 1)
-
-[node name="OptionButton" type="OptionButton" parent="."]
-process_priority = 6
-visible = false
-custom_minimum_size = Vector2(150, 28)
-layout_mode = 0
-offset_right = 150.0
-offset_bottom = 28.0
-focus_mode = 1
-icon_alignment = 1
-expand_icon = true
-selected = 0
-item_count = 4
-popup/item_0/icon = ExtResource("11_bwdex")
-popup/item_0/id = 0
-popup/item_1/icon = ExtResource("10_ah8td")
-popup/item_1/id = 1
-popup/item_2/icon = ExtResource("9_7lldt")
-popup/item_2/id = 2
-popup/item_3/icon = ExtResource("12_002ow")
-popup/item_3/id = 3
-
-[node name="PopupMenu" type="PopupMenu" parent="."]
-size = Vector2i(416, 642)
-theme_override_constants/icon_max_width = 28
-item_count = 4
-item_0/icon = ExtResource("11_bwdex")
-item_0/checkable = 2
-item_0/id = 0
-item_1/icon = ExtResource("10_ah8td")
-item_1/checkable = 2
-item_1/id = 1
-item_2/icon = ExtResource("9_7lldt")
-item_2/checkable = 2
-item_2/id = 2
-item_3/icon = ExtResource("12_002ow")
-item_3/checkable = 2
-item_3/id = 3
 
 [node name="page_picker" type="Node" parent="."]
 script = ExtResource("76_002ow")
@@ -471,3 +435,36 @@ mouse_button_image_bind_dict = {
 script = ExtResource("3_nvkn0")
 controller_type = 2
 name_of_file = "Switch_basic"
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+size = Vector2i(100, 280)
+visible = true
+unfocusable = true
+item_count = 4
+item_0/icon = ExtResource("38_y6co3")
+item_0/id = 0
+item_1/icon = ExtResource("39_whl64")
+item_1/id = 1
+item_2/icon = ExtResource("37_wv6ia")
+item_2/id = 2
+item_3/icon = ExtResource("36_qm62l")
+item_3/id = 3
+script = ExtResource("69_pvull")
+shader = ExtResource("1_pvull")
+
+[node name="PopupMenu2" type="PopupMenu" parent="."]
+auto_translate_mode = 1
+position = Vector2i(230, 0)
+size = Vector2i(100, 280)
+visible = true
+unfocusable = true
+item_count = 4
+item_0/icon = ExtResource("38_y6co3")
+item_0/id = 0
+item_1/icon = ExtResource("39_whl64")
+item_1/id = 1
+item_2/icon = ExtResource("37_wv6ia")
+item_2/id = 2
+item_3/icon = ExtResource("36_qm62l")
+item_3/id = 3
+script = ExtResource("69_pvull")
