@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_c6ths")
-ps4_buttons = 3
+ps4_buttons = 0
 metadata/_custom_type_script = "uid://cfnqqjq6wb6od"

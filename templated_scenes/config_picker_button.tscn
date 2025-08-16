@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://r7j3xncy5pod" path="res://resources/styles/main_theme.res" id="1_dwh4e"]
 [ext_resource type="Script" uid="uid://bmh51t41a0qnj" path="res://_scripts/controller_picker_page/buttons/config_picker_button.gd" id="2_e8cpj"]
-[ext_resource type="Resource" uid="uid://b6a6a1qa5ftv3" path="res://resources/controller_data/configs/switch_cfg.tres" id="3_tm8y5"]
+[ext_resource type="Resource" path="res://resources/controller_data/configs/Switch_basic_cfg.tres" id="3_dwh4e"]
 
 [node name="config_picker_button" type="Button"]
 clip_contents = true
@@ -15,4 +15,4 @@ clip_text = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("2_e8cpj")
-config = ExtResource("3_tm8y5")
+config = ExtResource("3_dwh4e")

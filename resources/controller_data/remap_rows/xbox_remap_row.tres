@@ -8,5 +8,6 @@
 [resource]
 script = ExtResource("4_rdoor")
 button = ExtResource("1_rdoor")
+remap_index = 0
 remap_action = ""
 remap_button_controller = [ExtResource("1_rdoor"), ExtResource("2_eg3kp"), ExtResource("3_dferg")]

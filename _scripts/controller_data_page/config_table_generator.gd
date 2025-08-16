@@ -6,14 +6,18 @@ class_name config_table_generator extends HBoxContainer
 @export var title_color: Color
 @export var even_color: Color
 @export var odd_color: Color
+@export var dropdown_color: Color
 
 @export var r_controller_cfg: controller_config
 @export var button_image_panel: PackedScene
+@export var remap_dropdown: PackedScene
 @export var action_text: PackedScene
 
 var title_style: StyleBoxFlat
 var even_style: StyleBoxFlat
 var odd_style: StyleBoxFlat
+var dropdown_style: StyleBoxFlat
+var popup_style: StyleBoxFlat
 var do_once = false
 
 const BOX_HEIGHT: int = 38
@@ -35,6 +39,9 @@ func _ready():
 	odd_style = StyleBoxFlat.new()
 	odd_style.bg_color = odd_color
 
+	dropdown_style = StyleBoxFlat.new()
+	dropdown_style.bg_color = dropdown_color
+
 func _theme_me():
 		# Create reusable styleboxes
 	title_style = StyleBoxFlat.new()
@@ -45,6 +52,9 @@ func _theme_me():
 
 	odd_style = StyleBoxFlat.new()
 	odd_style.bg_color = odd_color
+
+	dropdown_style = StyleBoxFlat.new()
+	dropdown_style.bg_color = dropdown_color
 
 func generate_grid():
 	# Clear the existing children
@@ -67,17 +77,18 @@ func generate_grid():
 				var m_button_remap_row: button_remap_row = r_controller_cfg.config_controller.controller_buttons[row]
 
 				# Adjust row index for styling (title is row 0)
-				var display_row = row + 1
 
 				match column_index:
 					0: # Controller button
 						var texture = get_button_value(m_button_remap_row.button)
-						generate_panel_image(display_row, col, texture)
+						var node_val: Node = button_image_panel.instantiate()
+						((node_val.get_node("Panel/TextureRect")) as TextureRect).texture = texture
+						generate_panel_content(row, col, node_val)
 					1: # Remapped button
-						var texture = get_button_value(m_button_remap_row.remap_button)
-						generate_panel_image(display_row, col, texture)
+						var node_val: Node = generate_remap_dropdown(row, r_controller_cfg.config_controller)
+						generate_panel_content(row, col, node_val as Node)
 					2: # Action description
-						generate_panel_text_box(display_row, col)
+						generate_panel_text_box(row, col)
 
 		col.add_theme_constant_override("separation", 2)
 		self.add_child(col)
@@ -96,11 +107,12 @@ func generate_panel_text_box(row: int, vbox: VBoxContainer):
 
 	panel.add_child(label)
 
+	var display_row = row + 1
 	# Use styleboxes instead of ColorRect
 	var style: StyleBoxFlat
-	if (row == 0):
+	if (display_row == 0):
 		style = title_style
-	elif (row % 2 == 0):
+	elif (display_row % 2 == 0):
 		style = even_style
 	else:
 		style = odd_style
@@ -138,21 +150,20 @@ func generate_panel_text(row: int, vbox: VBoxContainer, text: String, font_size:
 	panel.add_child(label)
 	vbox.add_child(panel)
 
-func generate_panel_image(row: int, vbox: VBoxContainer, texture: CompressedTexture2D):
+func generate_panel_content(row: int, vbox: VBoxContainer, node_val: Node):
 	var panel = Panel.new()
 
-	var node_val: Node = button_image_panel.instantiate()
-	((node_val.get_node("Panel/TextureRect")) as TextureRect).texture = texture
-
 	panel.size_flags_vertical = Control.SIZE_EXPAND
-	panel.custom_minimum_size = Vector2(100, BOX_HEIGHT)
+	panel.custom_minimum_size = Vector2(100, BOX_HEIGHT)	
+
 	panel.add_child(node_val)
 
+	var display_row = row + 1
 	# Use styleboxes instead of ColorRect
 	var style: StyleBoxFlat
-	if (row == 0):
+	if (display_row == 0):
 		style = title_style
-	elif (row % 2 == 0):
+	elif (display_row % 2 == 0):
 		style = even_style
 	else:
 		style = odd_style
@@ -160,6 +171,34 @@ func generate_panel_image(row: int, vbox: VBoxContainer, texture: CompressedText
 	panel.add_theme_stylebox_override("panel", style)
 
 	vbox.add_child(panel)
+
+func generate_remap_dropdown(row: int, buttons: controller_resource) -> Node:
+	
+	var label: Node = remap_dropdown.instantiate()
+	var dropdown: dropdown_to_config_data = label.get_node("./OptionButton")
+	
+	dropdown.remap_index = r_controller_cfg.config_controller.controller_buttons[row].remap_index
+	dropdown.row_index = row
+	dropdown.r_controller_config = r_controller_cfg
+
+	for i in range(buttons.controller_buttons.size()):
+		var texture = get_button_value(buttons.controller_buttons[i].button)
+		dropdown.add_icon_item(texture, "")
+
+	(dropdown as Control).custom_minimum_size = Vector2(100, BOX_HEIGHT)
+	(dropdown as Control).set_anchors_preset(Control.PRESET_FULL_RECT)
+
+	dropdown.allow_reselect = true
+	dropdown.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	dropdown.expand_icon = true
+	dropdown.add_theme_stylebox_override("normal", dropdown_style)
+
+	var popup: PopupMenu = dropdown.get_popup()
+	popup.add_theme_constant_override("icon_max_width", 32)
+	popup.add_theme_constant_override("h_separation", 50)
+
+	dropdown.select(dropdown.remap_index)
+	return label
 
 func get_button_value(button_resource: Resource) -> CompressedTexture2D:
 	var panel_value: CompressedTexture2D

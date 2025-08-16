@@ -7,6 +7,7 @@
 [resource]
 script = ExtResource("4_3oic4")
 button = ExtResource("2_pog01")
+remap_index = 0
 remap_action = ""
 remap_button_controller = [ExtResource("2_pog01"), ExtResource("3_f0aev")]
 metadata/_custom_type_script = "uid://bgt8dvhd2y7us"

@@ -7,7 +7,7 @@ enum ControllerType {
 	SWITCH
 }
 
-@export var controller_type := ControllerType
+@export var controller_type: ControllerType
 @export var name_of_file: String
 
 var ps4_button_row_template: button_remap_row = preload("res://resources/controller_data/remap_rows/ps4_remap_row.tres")
@@ -61,11 +61,12 @@ func _generate():
 
 		row.button = button_holder
 		row.remap_button = remap_holder
+		row.remap_index = button_holder.get(button_property)
 
 		controller_source.controller_buttons.append(row)
 
-	var save_path_resource = "res://resources/controller_data/" + name_of_file + "_source.tres"
-	var save_path_config = "res://resources/controller_data/" + name_of_file + "_cfg.tres"
+	var save_path_resource = "res://resources/controller_data/configs/sources/" + name_of_file + "_source.tres"
+	var save_path_config = "res://resources/controller_data/configs/" + name_of_file + "_cfg.tres"
 	ResourceSaver.save(controller_source, save_path_resource)
 
 	r_controller_config.config_name = name_of_file

@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3gfjq8mv10tg"]
+
+[ext_resource type="Script" uid="uid://btqnbpwn3cg4r" path="res://_scripts/controller_data_page/buttons/dropdown_to_config_data.gd" id="1_2vtn4"]
+
+[node name="dropdown_button" type="Control"]
+custom_minimum_size = Vector2(150, 38)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_max_width = 32
+icon_alignment = 1
+expand_icon = true
+allow_reselect = true
+script = ExtResource("1_2vtn4")

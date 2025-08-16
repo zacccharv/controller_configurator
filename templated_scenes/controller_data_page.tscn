@@ -1,15 +1,16 @@
-[gd_scene load_steps=18 format=3 uid="uid://duldjl2eys3fc"]
+[gd_scene load_steps=19 format=3 uid="uid://duldjl2eys3fc"]
 
 [ext_resource type="Script" uid="uid://ud5au0gntvyw" path="res://_scripts/table_background.gd" id="1_5c76l"]
 [ext_resource type="StyleBox" uid="uid://dvajegq5ut7ea" path="res://resources/styles/panel_style.tres" id="2_qjc3o"]
 [ext_resource type="Script" uid="uid://dulm5nf5b7a2c" path="res://_scripts/controller_data_page/config_table_generator.gd" id="3_2y2f6"]
-[ext_resource type="Resource" uid="uid://ccgq0w03vqbxb" path="res://resources/controller_data/configs/ps4_cfg.tres" id="4_eh5uf"]
+[ext_resource type="Resource" uid="uid://des3luohf7nu6" path="res://resources/controller_data/configs/Switch_basic_cfg.tres" id="4_qjc3o"]
 [ext_resource type="PackedScene" uid="uid://cm3m2iedf87js" path="res://templated_scenes/button_image_panel.tscn" id="5_56yng"]
+[ext_resource type="PackedScene" uid="uid://b3gfjq8mv10tg" path="res://templated_scenes/dropdown_button.tscn" id="6_2y2f6"]
 [ext_resource type="PackedScene" uid="uid://clnwoi4ueektg" path="res://templated_scenes/editable_label.tscn" id="6_6tiga"]
 [ext_resource type="Script" uid="uid://bxyw05g27p556" path="res://_scripts/controller_data_page/buttons/swap_table_button.gd" id="7_2s707"]
 [ext_resource type="Script" uid="uid://n8xx2nkain1q" path="res://_scripts/resource_classes/controller_config.gd" id="8_k1fhc"]
-[ext_resource type="Resource" uid="uid://b6a6a1qa5ftv3" path="res://resources/controller_data/configs/switch_cfg.tres" id="9_efpp0"]
-[ext_resource type="Resource" uid="uid://booh48bk7v2nm" path="res://resources/controller_data/configs/xbox_cfg.tres" id="10_x0qi3"]
+[ext_resource type="Resource" uid="uid://djm72u8w1qc6h" path="res://resources/controller_data/configs/ps4_basic_cfg.tres" id="10_56yng"]
+[ext_resource type="Resource" uid="uid://us37yb07mi1h" path="res://resources/controller_data/configs/Xbox_basic_cfg.tres" id="11_6tiga"]
 [ext_resource type="StyleBox" uid="uid://ktey0iwudfni" path="res://resources/styles/exit_style_hover.tres" id="11_eh5uf"]
 [ext_resource type="StyleBox" uid="uid://b4ed6qe1kv4iq" path="res://resources/styles/exit_style.tres" id="11_qjc3o"]
 [ext_resource type="Script" uid="uid://v1235ni2hu0i" path="res://_scripts/controller_data_page/buttons/exit_button.gd" id="12_2y2f6"]
@@ -116,8 +117,10 @@ table_title = NodePath("../title_container/title")
 title_color = Color(0.263009, 0.492047, 0.648815, 1)
 even_color = Color(0.266575, 0.266575, 0.266575, 1)
 odd_color = Color(0.158472, 0.158472, 0.158472, 1)
-r_controller_cfg = ExtResource("10_x0qi3")
+dropdown_color = Color(1, 1, 1, 0)
+r_controller_cfg = ExtResource("4_qjc3o")
 button_image_panel = ExtResource("5_56yng")
+remap_dropdown = ExtResource("6_2y2f6")
 action_text = ExtResource("6_6tiga")
 
 [node name="swap_button" type="Button" parent="title_table_swap_vbox" node_paths=PackedStringArray("r_table_generator")]
@@ -125,7 +128,7 @@ layout_mode = 2
 text = "SWAP"
 script = ExtResource("7_2s707")
 r_table_generator = NodePath("../config_table_hbox")
-r_controller_cfg = Array[ExtResource("8_k1fhc")]([ExtResource("9_efpp0"), ExtResource("10_x0qi3"), ExtResource("4_eh5uf")])
+r_controller_cfg = Array[ExtResource("8_k1fhc")]([ExtResource("10_56yng"), ExtResource("4_qjc3o"), ExtResource("11_6tiga")])
 metadata/_edit_group_ = true
 
 [node name="exit_button" type="Button" parent="title_table_swap_vbox"]
